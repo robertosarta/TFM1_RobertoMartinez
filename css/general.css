@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content-max {
+    width: 100rem;
+    margin: 0 auto;
+}
+
+
+/*  FONTS  */
+.font-white {
+    color: white;
+}
+
+.font-black {
+    color: black;
+}
+
+.fs-navBar {
+    font-size: 3.5rem;
+    text-decoration: none;
+    font-weight: 600;
+}
