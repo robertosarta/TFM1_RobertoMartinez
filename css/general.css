@@ -5,10 +5,9 @@
 }
 
 .content-max {
-    width: 100rem;
+    width: 110rem;
     margin: 0 auto;
 }
-
 
 /*  FONTS  */
 .font-white {
@@ -19,8 +18,46 @@
     color: black;
 }
 
-.fs-navBar {
+.font-title {
+    font-family: "Uncial Antiqua", system-ui;
+    font-weight: 400;
+}
+
+.font-text{
+    font-family: "IM Fell English SC", serif;
+    font-weight: 400;
+}
+
+.font-navbar-title{
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.font-navbar{
+    font-size: 2rem;
+}
+
+.fs-title {
     font-size: 3.5rem;
-    text-decoration: none;
-    font-weight: 600;
+}
+
+.fs-text {
+    font-size: 1.5rem;
+}
+
+.font-bold{
+    font-weight: bold;
+}
+
+.font-normal{
+    font-weight: normal;
+}
+
+/* BACKGROUND */
+#stars-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: black;
 }
