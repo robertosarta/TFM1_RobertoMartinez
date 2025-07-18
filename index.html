@@ -16,6 +16,8 @@
 
 <body>
     <div id="stars-js"></div>
+    <div id="stars-js2"></div>
+
     <!--  HEADER  -->
     <header class="header">
         <button class="menu-button" id="menuButton">
@@ -26,7 +28,7 @@
         <div class="header-logo">
             <img src="/images/dreamVeilSymbol_white.png" class="logo" alt="DreamVeil logo" />
         </div>
-        <div>
+        <div class="header-title">
             <h1 class="font-white font-text font-navbar-title">DreamVeil</h1>
         </div>
         <nav class="header-menu" id="headerMenu">
@@ -39,15 +41,24 @@
     <!--  HEADER END  -->
 
     <!-- MAIN -->
-    <main class="main content-max">
-        <div class="main-section">
-            <div class="">
-                <h1 class="font-white font-title fs-title">
+    <main class="main">
+        <div class="main-presentation_section">
+            <div class="presentation-composition">
+                <div class="presentation-composition_container">
+                    <iframe class="presentation-api" id="api-frame" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                    <iframe class="presentation-api" id="api-frame" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                    <iframe class="presentation-api" id="api-frame" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                </div>
+                <div class="presentation_image-container">
+                    <img class="presentation-composition-image_right" src="/images/sandmanTransparency.png" alt="Sandman image">
+                </div>
+            </div>
+            
+            <div class="presentation-titles">
+                <h1 class="font-white font-title fs-title presentation-title">
                     DONDE LOS SUEÑOS TOMAN FORMA
                 </h1>
-            </div>
-            <div class="">
-                <p class="font-white font-text fs-text">
+                <p class="font-white font-text fs-text presentation-subtitle">
                     Modelos 3d hechos con pasión mimo y detalle, explora un extenso catalogo
                     de figuras únicas para comprar o imprimir en casa
                 </p>
@@ -60,50 +71,10 @@
     </main>
     <!-- MAIN END -->
 
-    <!-- PARTICULAS ESTRELLAS -->
-    <script>
-        particlesJS("stars-js", {
-            particles: {
-                number: {
-                    value: 100, // Ajusta más o menos cantidad
-                    density: { enable: true, value_area: 1000 },
-                },
-                color: { value: "#ffffff" },
-                shape: { type: "circle" },
-                opacity: {
-                    value: 0.9,
-                    random: true,
-                    anim: {
-                        enable: true,
-                        speed: 0.0002,
-                        opacity_min: 0.0002,
-                        sync: false,
-                    },
-                },
-                size: {
-                    value: 1.5,
-                    random: true,
-                },
-                line_linked: {
-                    enable: false, // No líneas entre puntos
-                },
-                move: {
-                    enable: true, // No movimiento
-                    speed: 0.008,
-                },
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: {
-                    onhover: { enable: false },
-                    onclick: { enable: false },
-                    resize: true,
-                },
-            },
-            retina_detect: true,
-        });
-    </script>
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
     <script src="/javaScript/script.js"></script>
+    <script src="/javaScript/scriptBackground.js"></script>
+    <script src="/javaScript/scriptVisor.js"></script>
 </body>
-
 </html>
