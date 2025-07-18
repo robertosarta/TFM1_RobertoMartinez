@@ -108,16 +108,15 @@
     justify-content: space-evenly;
     align-items: center;
     max-width: 67rem;
-    max-height: 35rem;
     overflow: hidden;
     /* border: solid rgb(255, 0, 0) 0.01rem; */
 }
 
 .presentation-api{
-    width: 20rem;
-    height: 20rem;
+    width: 28rem;
+    height: 13rem;
     object-fit: contain;
-    border-radius: 20rem;
+    border-radius: 0.4rem;
 }
 
 .presentation_image-container{
