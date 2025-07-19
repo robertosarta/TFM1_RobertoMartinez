@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TFM1</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
@@ -43,56 +44,243 @@
 
     <!-- MAIN -->
     <main class="main">
+        <!-- PRESENTATION SECTION -->
         <div class="main-presentation_section">
             <div class="presentation-composition">
                 <div class="presentation-composition_container">
-                    <iframe class="presentation-api" id="api-frame-Witch" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-                    <iframe class="presentation-api" id="api-frame-Morpheus" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-                    <iframe class="presentation-api" id="api-frame-StitchedSwordsman" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-                    <iframe class="presentation-api_big" id="api-frame-Temple" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                    <iframe class="presentation-api" id="api-frame-Witch"
+                        allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen mozallowfullscreen="true"
+                        webkitallowfullscreen="true"></iframe>
+                    <iframe class="presentation-api" id="api-frame-Morpheus"
+                        allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen mozallowfullscreen="true"
+                        webkitallowfullscreen="true"></iframe>
+                    <iframe class="presentation-api" id="api-frame-StitchedSwordsman"
+                        allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen mozallowfullscreen="true"
+                        webkitallowfullscreen="true"></iframe>
+                    <iframe class="presentation-api_big" id="api-frame-Temple"
+                        allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen mozallowfullscreen="true"
+                        webkitallowfullscreen="true"></iframe>
                 </div>
                 <div class="presentation_image-container">
-                    <img class="presentation-composition-image_right" src="/images/sandmanTransparency.png" alt="Sandman image">
+                    <img class="presentation-composition-image_right" src="/images/sandmanTransparency.png"
+                        alt="Sandman image" />
                 </div>
             </div>
-            
+
             <div class="presentation-titles">
                 <h1 class="font-white font-title fs-title presentation-title">
                     DONDE LOS SUEÑOS TOMAN FORMA
                 </h1>
                 <p class="font-white font-text fs-text presentation-subtitle">
-                    Modelos 3d hechos con pasión mimo y detalle, explora un extenso catalogo
-                    de figuras únicas para comprar o imprimir en casa
+                    Modelos 3d hechos con pasión mimo y detalle, explora un extenso
+                    catalogo de figuras únicas para comprar o imprimir en casa
                 </p>
-                <button class="font-white font-title button-main">
-                TIENDA
+                <button class="font-white font-title button-main">TIENDA</button>
+            </div>
+        </div>
+        <!-- PRESENTATION SECTION CLOSE -->
+
+        <!-- CAROUSEL SECTION -->
+        <div class="carousel-container">
+            <!-- Flechas arriba a la derecha -->
+            <div class="carousel-controls">
+                <button class="btn btn-dark" data-bs-target="#modelsCarousel" data-bs-slide="prev">
+                    ‹
+                </button>
+                <button class="btn btn-dark" data-bs-target="#modelsCarousel" data-bs-slide="next">
+                    ›
                 </button>
             </div>
-            
-            <!-- <div>
-                <div>
-                    <img src="" alt="">
+
+            <!-- Carrusel -->
+            <div id="modelsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="9000">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="carousel-item_container">
+                            <!-- CARD 1 -->
+                            <div class="card card-custom text-center">
+                                <img src="/images/Brutos/DarkKnight/DarkKnight_full_transparency2.png"
+                                    class="card-img_front" alt="Black knight" />
+                                <img src="/images/backgrounds/sky.jpeg" class="card-img_back"
+                                    alt="background black knight">
+                                <div class="card-body">
+                                    <div class="card-text_container">
+                                        <h5 class="card-title">EL CABALLERO NEGRO</h5>
+                                        <p class="card-text">
+                                            Entra en combate contra quien se interponga en tu camino
+                                            y destruye a todos tus enemigos con este poderoso caballero.
+                                        </p>
+                                    </div>
+                                    <div class="card-button_container">
+                                        <a href="#" class="btn btn-yellow">VER MODELO</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- CARD 2 -->
+                            <div class="card card-custom text-center">
+                                <img src="/images/Brutos/QueenOfSwords/QueenOfSwords_transparency.png"
+                                    class="card-img_front" alt="Black knight" />
+                                <img src="/images/backgrounds/skyBright.jpeg" class="card-img_back"
+                                    alt="background black knight">
+                                <div class="card-body">
+                                    <div class="card-text_container">
+                                        <h5 class="card-title">REINA DE LAS ESPADAS</h5>
+                                        <p class="card-text">
+                                            Ella guiara a tu ejercito y sus armas hasta la victoria.
+                                            Que su divinidad te guarde en combate.
+                                        </p>
+                                    </div>
+                                    <div class="card-button_container">
+                                        <a href="#" class="btn btn-yellow">VER MODELO</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- CARD 3 -->
+                            <div class="card card-custom text-center">
+                                <img src="/images/Brutos/Ceridwen/Ceridwen_transparency2.png"
+                                    class="card-img_front" alt="Black knight" />
+                                <img src="/images/backgrounds/skyRed.jpeg" class="card-img_back"
+                                    alt="background black knight">
+                                <div class="card-body">
+                                    <div class="card-text_container">
+                                        <h5 class="card-title">CERIDWEN-HECHICERA FAUNA</h5>
+                                        <p class="card-text">
+                                            Ceridwen, hechicera del bosque antiguo, guardiana de secretos y portadora de sabiduría arcana. 
+                                            Su magia fluye con la naturaleza y el misterio.
+                                        </p>
+                                    </div>
+                                    <div class="card-button_container">
+                                        <a href="#" class="btn btn-yellow">VER MODELO</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- CARD 4 -->
+                            <div class="card card-custom text-center">
+                                <img src="/images/Brutos/KnightArtorias/KnightArtorias_transparency2.png"
+                                    class="card-img_front" alt="Black knight" />
+                                <img src="/images/backgrounds/skyMid.jpeg" class="card-img_back"
+                                    alt="background black knight">
+                                <div class="card-body">
+                                    <div class="card-text_container">
+                                        <h5 class="card-title">CABALLERO ARTORIAS</h5>
+                                        <p class="card-text">
+                                            Artorias, el Caminante del Abismo, fue un legendario caballero de Anor Londo, 
+                                            corrompido en su lucha contra la oscuridad. Su espíritu indomable aún resuena en cada batalla.
+                                        </p>
+                                    </div>
+                                    <div class="card-button_container">
+                                        <a href="#" class="btn btn-yellow">VER MODELO</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 2 -->
+                    <div class="carousel-item">
+                        <div class="carousel-item_container"> 
+                            <!-- CARD 1 -->
+                            <div class="card card-custom text-center">
+                                <img src="/images/Brutos/Linhi/Linhi_transparency.png"
+                                    class="card-img_front" alt="Black knight" />
+                                <img src="/images/backgrounds/skyRed.jpeg" class="card-img_back"
+                                    alt="background black knight">
+                                <div class="card-body">
+                                    <div class="card-text_container">
+                                        <h5 class="card-title">LINHI</h5>
+                                        <p class="card-text">
+                                            Linhi, valiente guerrera de tierras ancestrales, porta con orgullo su corona de plumas. 
+                                            Su espíritu libre y feroz defiende la armonía de su pueblo y la fuerza de la naturaleza.
+                                    </div>
+                                    <div class="card-button_container">
+                                        <a href="#" class="btn btn-yellow">VER MODELO</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- CARD 2 -->
+                            <div class="card card-custom text-center">
+                                <img src="/images/Brutos/ArashiAkuma/ArashiAkuma_transparency.png"
+                                    class="card-img_front" alt="Black knight" />
+                                <img src="/images/backgrounds/redMoon2.jpeg" class="card-img_back"
+                                    alt="background black knight">
+                                <div class="card-body">
+                                    <div class="card-text_container">
+                                        <h5 class="card-title">ARASHI AKUMA</h5>
+                                        <p class="card-text">
+                                            Arashi Akuma, ninja de las sombras, se desliza como el viento entre los enemigos. 
+                                            Su mirada oculta y letal precisión lo convierten en un espectro imparable del silencio y el acero.
+                                    </div>
+                                    <div class="card-button_container">
+                                        <a href="#" class="btn btn-yellow">VER MODELO</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
                 </div>
-                <div>
-                    <img src="" alt="">
-                </div>
-                <div>
-                    <img src="" alt="">
-                </div>
-                <div>
-                    <img src="/images/Brutos/DarkKnight/DarkKnight_full_transparency.png" alt="">
-                </div>
-            </div> -->
+            </div>
         </div>
+        <!-- CLOSE CAROUSEL SECTION -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="main-presentation_section">
+            <div class="presentation-composition">
+                <div class="presentation-composition_container">
+                    <iframe class="presentation-api" id="api-frame-Witch"
+                        allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen mozallowfullscreen="true"
+                        webkitallowfullscreen="true"></iframe>
+                    <iframe class="presentation-api" id="api-frame-Morpheus"
+                        allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen mozallowfullscreen="true"
+                        webkitallowfullscreen="true"></iframe>
+                    <iframe class="presentation-api" id="api-frame-StitchedSwordsman"
+                        allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen mozallowfullscreen="true"
+                        webkitallowfullscreen="true"></iframe>
+                    <iframe class="presentation-api_big" id="api-frame-Temple"
+                        allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen mozallowfullscreen="true"
+                        webkitallowfullscreen="true"></iframe>
+                </div>
+                <div class="presentation_image-container">
+                    <img class="presentation-composition-image_right" src="/images/sandmanTransparency.png"
+                        alt="Sandman image" />
+                </div>
+            </div>
+
+            <div class="presentation-titles">
+                <h1 class="font-white font-title fs-title presentation-title">
+                    DONDE LOS SUEÑOS TOMAN FORMA
+                </h1>
+                <p class="font-white font-text fs-text presentation-subtitle">
+                    Modelos 3d hechos con pasión mimo y detalle, explora un extenso
+                    catalogo de figuras únicas para comprar o imprimir en casa
+                </p>
+                <button class="font-white font-title button-main">TIENDA</button>
+            </div>
     </main>
     <!-- MAIN END -->
 
     <!-- SCRIPTS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
     <script src="/javaScript/catalog.js"></script>
     <script src="/javaScript/script.js"></script>
     <script src="/javaScript/scriptBackground.js"></script>
     <script src="/javaScript/scriptVisor.js"></script>
 </body>
+
 </html>

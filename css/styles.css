@@ -1,5 +1,5 @@
-.header{
-    background-color: #79688C;
+.header {
+    background-color: #2b2038;
     padding: 1rem 0rem;
     display: flex;
     align-items: center;
@@ -11,7 +11,7 @@
     box-shadow: 0.1rem 0.1rem 1rem 0 #6d6d6d;
 }
 
-.menu-button{
+.menu-button {
     position: fixed;
     flex-direction: column;
     width: 1.875rem;
@@ -25,7 +25,7 @@
     margin: 0rem 0rem 0rem 1rem;
 }
 
-.menu-button .bar{
+.menu-button .bar {
     display: block;
     height: 3px;
     width: 25px;
@@ -34,34 +34,36 @@
     transition: all 0.3s ease;
 }
 
-.menu-button.open .bar:nth-child(1){
+.menu-button.open .bar:nth-child(1) {
     transform: rotate(45deg) translateY(0.5625rem);
 }
-.menu-button.open .bar:nth-child(2){
-    opacity:0;
+
+.menu-button.open .bar:nth-child(2) {
+    opacity: 0;
 }
-.menu-button.open .bar:nth-child(3){
+
+.menu-button.open .bar:nth-child(3) {
     transform: rotate(-45deg) translateY(-9px);
 }
 
-.header-logo{
+.header-logo {
     max-width: 3rem;
     max-height: 3rem;
     overflow: hidden;
     margin: 0rem 0rem 0rem 3.8rem;
 }
 
-.logo{
+.logo {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.menu-title{
+.menu-title {
     display: flex;
 }
 
-.header-menu a{
+.header-menu a {
     color: #e0e0e0;
     text-decoration: none;
     font-size: 16px;
@@ -71,20 +73,23 @@
     margin-right: 1.5rem;
 }
 
-.header-menu a:hover{
-    color: #b5a377;
+.header-menu a:hover {
+    color: #82b3d5;
 }
 
-.main{
+.main {
     display: flex;
     flex-direction: column;
-    padding-top: 6rem; /* Espacio suficiente para no tapar con el header */
-    padding-inline: 2rem; /*Espacio a ambos lados para no chocar*/
-    gap: 3rem; /* Espacio entre secciones */
+    padding-top: 6rem;
+    /* Espacio suficiente para no tapar con el header */
+    padding-inline: 2rem;
+    /*Espacio a ambos lados para no chocar*/
+    gap: 3rem;
+    /* Espacio entre secciones */
     /* border: solid rgb(92, 92, 92) 0.01rem; */
 }
 
-.main-presentation_section{
+.main-presentation_section {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -94,13 +99,13 @@
     /* border: solid rgb(92, 92, 92) 0.01rem; */
 }
 
-.presentation-composition{
+.presentation-composition {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.presentation-composition_container{
+.presentation-composition_container {
     display: flex;
     flex-wrap: wrap;
     gap: 3em;
@@ -111,20 +116,21 @@
     /* border: solid rgb(255, 0, 0) 0.01rem; */
 }
 
-.presentation-api{
+.presentation-api {
     width: 23rem;
     height: 12rem;
     object-fit: contain;
     border-radius: 0.4rem;
 }
-.presentation-api_big{
+
+.presentation-api_big {
     width: 76.5rem;
-    height: 25rem;
+    height: 23rem;
     object-fit: contain;
     border-radius: 0.4rem;
 }
 
-.presentation_image-container{
+.presentation_image-container {
     width: 23vw;
     max-width: 30rem;
     min-width: 14rem;
@@ -134,13 +140,13 @@
     /* border: solid rgb(255, 0, 0) 0.01rem; */
 }
 
-.presentation-composition-image_right{
+.presentation-composition-image_right {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.presentation-titles{
+.presentation-titles {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -148,34 +154,134 @@
     /* border: solid rgb(255, 0, 0) 0.01rem; */
 }
 
-.presentation-title{
+.presentation-title {
     white-space: normal;
     word-break: break-word;
 }
 
-.presentation-subtitle{
+.presentation-subtitle {
     white-space: normal;
     word-break: break-word;
 }
 
-.button-main{
+.button-main {
     height: 2.5rem;
-    background-color: #82B3D5;
+    background-color: #82b3d5;
     border-radius: 1.5rem;
     max-width: 5rem;
 }
 
+/*CAROUSEL*/
+.carousel-container {
+    position: relative;
+    padding-top: 50px;
+    /* border: solid rgb(255, 0, 0) 0.01rem; */
+    height: auto;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.carousel-item {
+    padding: 1.25rem;
+}
+
+.carousel-item_container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    /* border: solid rgb(136, 255, 0) 0.01rem; */
+}
+
+.card-custom {
+/* border: solid rgb(255, 0, 0) 0.01rem; */
+position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    color: white;
+    height: 38rem; /*comprobar*/
+    max-width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-img_front{
+    position: relative;
+    z-index: 1;
+    height: 22rem;
+    width: auto;
+    margin-bottom: 11rem;
+    transition: transform 0.5s ease;
+    /* border: solid rgb(255, 0, 0) 0.01rem; */
+}
+
+.card-img_back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    object-fit: cover;
+}
+.card-title{
+    z-index: 2;
+    padding-bottom: 1rem;
+}
+.card-body {
+    z-index: 2;
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 36.99%);
+    padding: 1rem; 
+    bottom: 0;
+    height: 24rem;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-text_container{
+    padding-top: 8rem;
+}
+
+.btn-yellow {
+    background-color: #82b3d5;
+    color: black;
+    border: none;
+}
+
+.bg-dark-custom {
+    background-color: #1e1e1e;
+}
+
+.bg-blue-custom {
+    background-color: #2c3e50;
+}
+
+.bg-red-custom {
+    background-color: #a93226;
+}
+
+.bg-purple-custom {
+    background-color: #512e5f;
+}
+
 /*MEDIA QUERIES*/
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .header-menu.open {
         display: flex;
     }
-    .header-menu{
+
+    .header-menu {
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: #79688C;
+        background-color: #79688c;
         display: none;
         flex-direction: column;
         align-items: flex-start;
