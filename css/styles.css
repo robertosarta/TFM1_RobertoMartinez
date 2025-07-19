@@ -90,7 +90,7 @@
     justify-content: flex-end;
     position: relative;
     min-height: calc(100vh - 10rem);
-    padding-bottom: 2rem;
+    gap: 2rem;
     /* border: solid rgb(92, 92, 92) 0.01rem; */
 }
 
@@ -101,26 +101,31 @@
 }
 
 .presentation-composition_container{
-    padding: 2rem 0rem 0rem 0rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 3em;
     justify-content: space-evenly;
     align-items: center;
-    max-width: 67rem;
+    max-width: 78rem;
     overflow: hidden;
     /* border: solid rgb(255, 0, 0) 0.01rem; */
 }
 
 .presentation-api{
-    width: 28rem;
-    height: 13rem;
+    width: 23rem;
+    height: 12rem;
+    object-fit: contain;
+    border-radius: 0.4rem;
+}
+.presentation-api_big{
+    width: 76.5rem;
+    height: 25rem;
     object-fit: contain;
     border-radius: 0.4rem;
 }
 
 .presentation_image-container{
-    width: 25vw;
+    width: 23vw;
     max-width: 30rem;
     min-width: 14rem;
     height: auto;

@@ -31,8 +31,8 @@
 //     return product.uid;
 // }
 
-let uid1 = "6e47b68d13a0413d8fd5fa248a639e8b";
-let iframe1 = document.getElementById(`api-frame-TiPche`);
+let uid1 = "aea0f05978384dc992398ab122c7f2f8";
+let iframe1 = document.getElementById(`api-frame-Morpheus`);
 // By default, the latest version of the viewer API will be used.
 let client1 = new Sketchfab(iframe1);
 client1.init(uid1, {
@@ -68,11 +68,29 @@ client2.init(uid2, {
 });
 
 
-const uid3 = "aea0f05978384dc992398ab122c7f2f8";
-const iframe3 = document.getElementById(`api-frame-Morpheus`);
+const uid3 = "ab4cadb444a44f7883995ddb3bf3d087";
+const iframe3 = document.getElementById(`api-frame-StitchedSwordsman`);
 // By default, the latest version of the viewer API will be used.
 const client3 = new Sketchfab(iframe3);
 client3.init(uid3, {
+    success: function onSuccess(api) {
+        api.start();
+        api.addEventListener("viewerready", function () {
+            // API is ready to use
+            // Insert your code here
+            console.log("Viewer is ready");
+        });
+    },
+    error: function onError() {
+        console.log("Viewer error");
+    },
+});
+
+const uid4 = "f3e5a8e7f36a4c7496f5c775acf010b7";
+const iframe4 = document.getElementById(`api-frame-Temple`);
+// By default, the latest version of the viewer API will be used.
+const client4 = new Sketchfab(iframe4);
+client4.init(uid4, {
     success: function onSuccess(api) {
         api.start();
         api.addEventListener("viewerready", function () {
