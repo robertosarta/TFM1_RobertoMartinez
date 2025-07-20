@@ -41,12 +41,15 @@
     font-size: 3.5rem;
 }
 
+.fs-header{
+    font-size: 2.5rem;
+}
 .fs-subtitle{
     font-size: 1.6rem;
 }
 
 .fs-text {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .font-bold{
@@ -55,6 +58,14 @@
 
 .font-normal{
     font-weight: normal;
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 768px) {
+    .fs-header{
+    font-size: 2rem;
+    transition: 0.5s ease;
+    }
 }
 
 /* BACKGROUND */
