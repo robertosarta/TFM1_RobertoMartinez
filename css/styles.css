@@ -1,5 +1,5 @@
 .header {
-    background-color: #2b2038;
+    background-color: #6C4EA2;
     padding: 1rem 0rem;
     display: flex;
     align-items: center;
@@ -34,6 +34,11 @@
     transition: all 0.3s ease;
 }
 
+.menu-button .bar:hover{
+    background-color: #9F7ACD;
+    transition: none;
+}
+
 .menu-button.open .bar:nth-child(1) {
     transform: rotate(45deg) translateY(0.5625rem);
 }
@@ -59,8 +64,13 @@
     object-fit: contain;
 }
 
-.menu-title {
-    display: flex;
+.header-logo:hover{
+    cursor: pointer;
+}
+
+.header-title {
+    cursor:default;
+    padding-top: 0.9rem;
 }
 
 .header-menu a {
@@ -74,9 +84,10 @@
 }
 
 .header-menu a:hover {
-    color: #82b3d5;
+    color: #9F7ACD;
 }
 
+/*MAIN SECTION*/
 .main {
     display: flex;
     flex-direction: column;
@@ -127,7 +138,7 @@
 }
 
 .presentation-iframe_container:hover{
-    background-color: rgba(78, 110, 143, 0.6);
+    background-color: #2b2038;
 }
 
 .presentation-api {
@@ -137,7 +148,7 @@
 }
 
 .presentation-iframe_container_big{
-    background-color: rgba(44, 62, 80, 0.09);
+    background-color: rgba(44, 62, 80, 0.08);
     border-radius: 2rem;
     display: flex;
     flex-direction: column;
@@ -148,7 +159,7 @@
 }
 
 .presentation-iframe_container_big:hover{
-    background-color: rgba(78, 110, 143, 0.6);
+    background-color: #2b2038;
 }
 
 .presentation-api_big {
@@ -200,6 +211,17 @@
 .presentation-subtitle {
     white-space: normal;
     word-break: break-word;
+}
+
+.btn-primary{
+    background-color: #4C6FAD;
+    border: solid transparent;
+}
+
+.btn-primary:hover{
+    background-color: #2b2038;
+    border: solid #2b2038;
+    transition: 0.4s ease;
 }
 
 .divider{
@@ -270,29 +292,26 @@
 .card-body {
     z-index: 2;
     background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 36.99%);
-    padding: 1rem; 
+    padding: 2rem;
+    gap: 1rem
+    ; 
     bottom: 0;
     height: 24rem;
     position: absolute;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.card-text_container{
-    padding-top: 8rem;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .btn-blue{
-    background-color: #82b3d5;
-    color: black;
+    background-color: #4C6FAD;
+    color: #000000;
     border: none;
 }
 
 .btn-blue:hover{
     color: white;
-    background-color: transparent;
+    background-color: #2b2038;
     cursor: pointer;
     border: solid 0.15rem #2b2038;
 }
@@ -302,27 +321,20 @@
     flex-direction: row;
     z-index: 1;
     max-height: 35rem;
-    border: solid rgb(255, 0, 0) 0.01rem;
 }
 
 .main-structures-titlebox_container{
-    max-width: 20rem;
-    height: auto;
-    background-color: #2c3e50;
+    max-width: 22rem;
+    background-color: #1E293B;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: solid rgb(255, 0, 0) 0.01rem;
+    padding: 1rem;
+    /* border: solid rgb(255, 0, 0) 0.01rem; */
 }
 
 .main-structures-titlebox_image{
     max-width: 10rem;
-}
-.main-structures-titlebox{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
 }
 
 .main-structures-titlebox_text{
@@ -330,15 +342,17 @@
 }
 
 .main-structures-image_container{
+    display: flex;
     max-width: 150rem;
     height: auto;
     overflow: hidden;
+    /* border: solid rgb(255, 0, 0) 0.01rem; */
 }
 
 .main-structures-image{
-    height: auto;
+    height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 
@@ -365,8 +379,45 @@
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
-    border: solid #2c3e50;
     text-align: center;
     width: 100%;
-}
+    justify-content: flex-end;
+    }
+
+    .main-structures-composition{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    }
+
+    .main-structures-titlebox_container{
+    display: flex;
+    max-width: none;
+    width: 100%;
+    background-color: #1E293B;
+    padding: 0.5;
+    }
+
+    .main-structures-titlebox_image{
+        max-width: 3rem;
+    }
+    
+    .fs-subtitle{
+        font-size: 1.2rem;
+    }
+
+    .fs-text{
+        font-size: 0.9rem;
+    }
+    .main-structures-titlebox{
+        display: flex;
+    }
+
+    .main-structures-image_container{
+        height: 100%;
+        width: 100%;
+        flex: 1;
+    }
 }

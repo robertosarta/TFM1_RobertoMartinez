@@ -66,7 +66,7 @@ particlesJS("stars-js2", {
         },
         move: {
             enable: true, // No movimiento
-            speed: 0.1,
+            speed: 0.14,
         },
     },
     interactivity: {

@@ -12,8 +12,9 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/general.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+
 </head>
 
 <body>
@@ -29,10 +30,12 @@
             <span class="bar"></span>
         </button>
         <div class="header-logo">
-            <img src="/images/dreamVeilSymbol_white.png" class="logo" alt="DreamVeil logo" />
+            <a href="#">
+                <img src="/images/dreamVeilSymbol_white.png" class="logo" alt="DreamVeil logo" />
+            </a>
         </div>
         <div class="header-title">
-            <h1 class="font-white font-text font-navbar-title">DreamVeil</h1>
+            <h1 class="font-white font-text font-navbar-title fs-title">DREAMVEIL</h1>
         </div>
         <nav class="header-menu" id="headerMenu">
             <a href="#inicio">Inicio</a>
@@ -45,7 +48,7 @@
 
     <!-- MAIN -->
     <main class="main">
-        <!-- PRESENTATION SECTION -->
+        <!-- MAIN PRESENTATION SECTION -->
         <div class="main-presentation_section">
             <div class="presentation-composition">
                 <div class="presentation-composition_container">
@@ -101,15 +104,17 @@
                     catalogo de figuras únicas para comprar o imprimir en casa
                 </p>
                 <div class="card-button_container">
-                    <a href="#" class="btn btn-blue font-title">TIENDA</a>
+                    <a href="########">
+                        <button class="btn btn-primary font-title font-black" type="submit">TIENDA</button>
+                    </a>
                 </div>
             </div>
         </div>
-        <!-- PRESENTATION SECTION CLOSE -->
-        
+        <!-- MAIN PRESENTATION SECTION CLOSE -->
+
         <div class="divider"></div>
 
-        <!-- CAROUSEL SECTION -->
+        <!-- MAIN CAROUSEL SECTION -->
         <div class="carousel-container">
             <!-- Flechas arriba a la derecha -->
             <div class="carousel-controls">
@@ -120,10 +125,10 @@
                     ›
                 </button>
             </div>
-            <!-- Carrusel -->
+            <!-- CAROUSEL -->
             <div id="modelsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="9000">
                 <div class="carousel-inner">
-                    <!-- Slide 1 -->
+                    <!-- SLIDE 1 -->
                     <div class="carousel-item active">
                         <div class="carousel-item_container">
                             <!-- CARD 1 -->
@@ -166,15 +171,15 @@
                             </div>
                             <!-- CARD 3 -->
                             <div class="card card-custom text-center">
-                                <img src="/images/Brutos/Ceridwen/Ceridwen_transparency2.png"
-                                    class="card-img_front" alt="Black knight" />
+                                <img src="/images/Brutos/Ceridwen/Ceridwen_transparency2.png" class="card-img_front"
+                                    alt="Black knight" />
                                 <img src="/images/backgrounds/skyRed.jpeg" class="card-img_back"
                                     alt="background black knight">
                                 <div class="card-body">
                                     <div class="card-text_container">
                                         <h5 class="card-title font-title">CERIDWEN-HECHICERA FAUNA</h5>
                                         <p class="card-text font-text fs-text">
-                                            Ceridwen, hechicera del bosque antiguo. 
+                                            Ceridwen, hechicera del bosque antiguo.
                                             Su magia fluye con la naturaleza y el misterio.
                                         </p>
                                     </div>
@@ -204,21 +209,21 @@
                             </div>
                         </div>
                     </div>
-
+                    <!-- CLOSE SLIDE 1 -->
                     <!-- SLIDE 2 -->
                     <div class="carousel-item">
-                        <div class="carousel-item_container"> 
+                        <div class="carousel-item_container">
                             <!-- CARD 1 -->
                             <div class="card card-custom text-center">
-                                <img src="/images/Brutos/Linhi/Linhi_transparency.png"
-                                    class="card-img_front" alt="Black knight" />
+                                <img src="/images/Brutos/Linhi/Linhi_transparency.png" class="card-img_front"
+                                    alt="Black knight" />
                                 <img src="/images/backgrounds/skyRed.jpeg" class="card-img_back"
                                     alt="background black knight">
                                 <div class="card-body">
                                     <div class="card-text_container">
                                         <h5 class="card-title font-title">LINHI</h5>
                                         <p class="card-text font-text fs-text">
-                                            Linhi, valiente guerrera de tierras ancestrales. 
+                                            Linhi, valiente guerrera de tierras ancestrales.
                                             Libre y feroz defiende la armonía de su pueblo y la fuerza de la naturaleza.
                                     </div>
                                     <div class="card-button_container">
@@ -233,45 +238,73 @@
                                 <img src="/images/backgrounds/redMoon2.jpeg" class="card-img_back"
                                     alt="background black knight">
                                 <div class="card-body">
-                                    <div class="card-text_container">
-                                        <h5 class="card-title font-title">ARASHI AKUMA</h5>
-                                        <p class="card-text font-text fs-text">
-                                            Arashi Akuma, ninja de las sombras. 
-                                            Su mirada oculta y letal precisión lo convierten en un espectro imparable del silencio y el acero.
-                                    </div>
+                                    <h5 class="card-title font-title">ARASHI AKUMA</h5>
+                                    <p class="card-text font-text fs-text">
+                                        Arashi Akuma, ninja de las sombras.
+                                        Su mirada oculta y letal precisión lo convierten en un espectro imparable del
+                                        silencio y el acero.
+                                    </p>
                                     <div class="card-button_container">
                                         <a href="#" class="btn btn-blue font-title">VER MODELO</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>    
+                    </div>
+                    <!-- CLOSE SLIDE 2 -->
                 </div>
             </div>
         </div>
-        <!-- CLOSE CAROUSEL SECTION -->
+        <!-- CLOSE MAIN CAROUSEL SECTION -->
         <div class="divider"></div>
         <!-- MAIN STRUCTURES SECTION -->
         <div class="main-structures-composition">
             <div class="main-structures-titlebox_container">
-                <div class="main-structures-titlebox">
-                    <img class="main-structures-titlebox_image" src="/images/dreamVeilSymbol_white.png" alt="Logo de DreamVeil">
-                    <h2 class="main-structures-titlebox_text font-white font-title fs-subtitle">EXPLORA NUESTROS ENTORNOS Y ESTRUCTURAS</h2>
-                    <p class="main-structures-titlebox_text font-white font-text fs-text">Cada elemento ha sido creado con mimo y dedicación. Explora todo cuanto
+                    <img class="main-structures-titlebox_image" src="/images/dreamVeilSymbol_white.png"
+                        alt="Logo de DreamVeil">
+                    <h2 class="main-structures-titlebox_text font-white font-title fs-subtitle">EXPLORA NUESTROS
+                        ENTORNOS Y ESTRUCTURAS</h2>
+                    <p class="main-structures-titlebox_text font-white font-text fs-text">Cada elemento ha sido creado
+                        con mimo y dedicación. Explora todo cuanto
                         hayas podido soñar y añadelo a tu carrito para hacer tus sueños realidad.
                     </p>
-                </div>
                 <div class="card-button_container">
-                    <a href="#" class="btn btn-blue">VER MODELO</a>
+                    <a href="########">
+                        <button class="btn btn-primary font-title font-black" type="submit">VER MODELO</button>
+                    </a>
                 </div>
             </div>
             <div class="main-structures-image_container">
-                <img class="main-structures-image" src="/images/Brutos/DesolatedRuins/DesolatedRuins.JPG" alt="Ruinas desoladas">
+                <img class="main-structures-image" src="/images/Brutos/DesolatedRuins/DesolatedRuins.JPG"
+                    alt="Ruinas desoladas">
             </div>
         </div>
 
         <div class="divider"></div>
 
+        <div class="main-structures-composition">
+            <div class="main-structures-titlebox_container">
+                    <img class="main-structures-titlebox_image" src="/images/dreamVeilSymbol_white.png"
+                        alt="Logo de DreamVeil">
+                    <h2 class="main-structures-titlebox_text font-white font-title fs-subtitle">EXPLORA NUESTROS
+                        ENTORNOS Y ESTRUCTURAS</h2>
+                    <p class="main-structures-titlebox_text font-white font-text fs-text">Cada elemento ha sido creado
+                        con mimo y dedicación. Explora todo cuanto
+                        hayas podido soñar y añadelo a tu carrito para hacer tus sueños realidad.
+                    </p>
+                <div class="card-button_container">
+                    <a href="########">
+                        <button class="btn btn-primary font-title font-black" type="submit">VER MODELO</button>
+                    </a>
+                </div>
+            </div>
+            <div class="main-structures-image_container">
+                <img class="main-structures-image" src="/images/Brutos/AncientGreekTempleRuins/AncientGreekTempleRuins.JPG"
+                    alt="Ruinas desoladas">
+            </div>
+        </div>
+        
+        <div class="divider"></div>
     </main>
     <!-- MAIN END -->
 
