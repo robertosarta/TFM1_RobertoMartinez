@@ -79,3 +79,45 @@ particlesJS("stars-js2", {
     },
     retina_detect: true,
 });
+
+
+particlesJS("stars-js3", {
+    particles: {
+        number: {
+            value: 5, // Ajusta más o menos cantidad
+            density: { enable: true, value_area: 1000 },
+        },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: {
+            value: 1,
+            random: false,
+            anim: {
+                enable: false,
+                speed: 0.0002,
+                opacity_min: 0.0002,
+                sync: false,
+            },
+        },
+        size: {
+            value: 1,
+            random: false,
+        },
+        line_linked: {
+            enable: false, // No líneas entre puntos
+        },
+        move: {
+            enable: true, // No movimiento
+            speed: 0.6,
+        },
+    },
+    interactivity: {
+        detect_on: "canvas",
+        events: {
+            onhover: { enable: false },
+            onclick: { enable: false },
+            resize: true,
+        },
+    },
+    retina_detect: true,
+});
