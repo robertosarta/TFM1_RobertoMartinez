@@ -38,15 +38,13 @@
         <div class="header-title">
             <h1 class="font-white font-text font-navbar-title fs-header">DREAMVEIL</h1>
         </div>
-        <nav class="header-menu font-text fs-text" id="headerMenu">
-            <div>
-                <a href="#inicio">PERSONAJES</a>
+        <nav class="header-menu font-text fs-text" id="header-menu">
+            <div class="header-menu-link_container">
+                <a href="#inicio" class="nav-text">LOGIN</a>
+                <i class="nav-text bi bi-person-circle"></i>
             </div>
             <div>
-                <a href="/unidad4_ej3/unidad4_ej3.html">CRIATURAS</a>
-            </div>
-            <div>
-                <a href="#contacto">ENTORNOS</a>
+                <a href="/unidad4_ej3/unidad4_ej3.html">CATALOGO</a>
             </div>
             <div>
                 <a href="/unidad4_ej3/unidad4_ej3_carrito.html">CARRITO</a>
@@ -54,13 +52,22 @@
         </nav>
     </header>
     <!-- DESPLEGABLE MENU (lo saque fuera para que el zindex del header no interfiriese y poder maquetarlo, no se si esta bien hecho asi)-->
-    <div class="desplegable-menu">
+    <div class="desplegable-menu" id="desplegable-menu">
         <div class="desplegable-menu-bar_busqueda">
             <input class="busqueda" type="search" placeholder="Busca tu sueño o pesadilla favorita">
             <i class="bi bi-search"></i>
         </div>
+        <div class="desplegable-menu-bar_login">
+            <div class="desplegable-menu-bar_login_container">
+                <a href="#inicio" class="nav-text font-white font-text fs-text">LOGIN</a>
+                <i class="nav-text bi bi-person-circle font-white"></i>
+            </div>
+            <div class="desplegable-menu-bar_login_container">
+                <i class="bi bi-basket2-fill font-white"></i>
+            </div>
+        </div>
         <div class="desplegable-menu-bar_categories">
-            <div class="desplegable-menu-bar_categories_container">
+            <div class="desplegable-menu-bar_categories_container_title">
                 <h2 class="fs-subtitle font-white font-title">SUEÑOS</h2>
             </div>
             <div class="desplegable-menu-bar_categories_container">
@@ -77,7 +84,7 @@
             </div>
         </div>
         <div class="desplegable-menu-bar_categories">
-            <div class="desplegable-menu-bar_categories_container">
+            <div class="desplegable-menu-bar_categories_container_title">
                 <h2 class="fs-subtitle font-white font-title">PESADILLAS</h2>
             </div>
             <div class="desplegable-menu-bar_categories_container">

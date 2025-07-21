@@ -1,8 +1,8 @@
 const menuToggle = document.getElementById("menuButton");
-const navMenu = document.getElementById("headerMenu");
+const desplegableMenu = document.getElementById("desplegable-menu");
 
 menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("open");
+    desplegableMenu.classList.toggle("open");
     menuToggle.classList.toggle("open"); // esto activa la animación
 });
 
