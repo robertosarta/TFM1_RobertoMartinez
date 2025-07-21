@@ -538,23 +538,6 @@
 
 /*MEDIA QUERIES*/
 @media (max-width: 970px) {
-    .desplegable-menu{
-    position: fixed;
-    z-index: 900;
-    background-color: yellow;
-    padding-top: 3.8rem;
-    left: 0;
-    height: 100%;
-    width: 26rem;
-    overflow: scroll;
-    display: none;
-    }
-
-    .desplegable-menu.open{
-    display: flex;
-    flex-direction: column;
-    }
-
     .header-menu div{
         display: flex;
         align-items: center;
@@ -579,6 +562,24 @@
     .header-menu{
         display: none;
     }
+
+    .desplegable-menu{
+    position: fixed;
+    z-index: 900;
+    background-color: yellow;
+    padding-top: 3.8rem;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    display: none;
+    }
+
+    .desplegable-menu.open{
+    display: flex;
+    flex-direction: column;
+    }
+
     .desplegable-menu-bar_login{
     background-color: #2b2038;
     width: 100%;
@@ -589,6 +590,7 @@
     padding: 0.3rem 1rem 0.5rem 0.5rem;
     gap: 0.5rem; 
     }
+    
     .presentation-iframe_container{
     border-radius: 0.5rem;
     display: flex;
