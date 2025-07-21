@@ -7,6 +7,7 @@
     <title>TFM1</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
@@ -52,6 +53,59 @@
             </div>
         </nav>
     </header>
+    <!-- DESPLEGABLE MENU (lo saque fuera para que el zindex del header no interfiriese y poder maquetarlo, no se si esta bien hecho asi)-->
+    <div class="desplegable-menu">
+        <div class="desplegable-menu-bar_busqueda">
+            <input class="busqueda" type="search" placeholder="Busca tu sueño o pesadilla favorita">
+            <i class="bi bi-search"></i>
+        </div>
+        <div class="desplegable-menu-bar_categories">
+            <div class="desplegable-menu-bar_categories_container">
+                <h2 class="fs-subtitle font-white font-title">SUEÑOS</h2>
+            </div>
+            <div class="desplegable-menu-bar_categories_container">
+                <p class="fs-subtitle font-white font-text">Personajes</p>
+            </div>
+            <div class="desplegable-menu-bar_categories_container">
+                <p class="fs-subtitle font-white font-text">Criaturas</p>
+            </div>
+            <div class="desplegable-menu-bar_categories_container">
+                <p class="fs-subtitle font-white font-text">Entornos</p>
+            </div>
+            <div class="desplegable-menu-bar_categories_container">
+                <p class="fs-subtitle font-white font-text">Estructuras</p>
+            </div>
+        </div>
+        <div class="desplegable-menu-bar_categories">
+            <div class="desplegable-menu-bar_categories_container">
+                <h2 class="fs-subtitle font-white font-title">PESADILLAS</h2>
+            </div>
+            <div class="desplegable-menu-bar_categories_container">
+                <p class="fs-subtitle font-white font-text">Personajes</p>
+            </div>
+            <div class="desplegable-menu-bar_categories_container">
+                <p class="fs-subtitle font-white font-text">Criaturas</p>
+            </div>
+            <div class="desplegable-menu-bar_categories_container">
+                <p class="fs-subtitle font-white font-text">Entornos</p>
+            </div>
+            <div class="desplegable-menu-bar_categories_container">
+                <p class="fs-subtitle font-white font-text">Estructuras</p>
+            </div>
+        </div>
+        <div class="desplegable-menu-bar_categories_team">
+            <div class="desplegable-menu-bar_categories_">
+                <h2 class="fs-text font-white font-title">Nuestro equipo</h2>
+            </div>
+            <a href="" class="fs-text font-white font-text">Contacta con nosotros</a>
+            <a href="" class="fs-text font-white font-text">Términos y condiciones de venta</a>
+            <a href="" class="fs-text font-white font-text">Entregas</a>
+            <a href="" class="fs-text font-white font-text">Devoluciones</a>
+            <a href="" class="fs-text font-white font-text">Valoranos</a>
+            <a href="" class="fs-text font-white font-text">Porque comprar en DreamVeil</a>
+        </div>
+    </div>
+    <!-- DESPLEGABLE MENU END -->
     <!--  HEADER END  -->
 
     <!-- MAIN -->
@@ -119,44 +173,9 @@
         <!-- MAIN PRESENTATION SECTION CLOSE -->
 
         <div class="divider"></div>
-        
-
-
-
-
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Launch static backdrop modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-<div class="divider"></div>
 
         <!-- MAIN CAROUSEL SECTION -->
-        <div class="carousel-container">
+        <div class="main-carousel-section">
             <!-- Flechas arriba a la derecha -->
             <div class="carousel-controls">
                 <button class="btn btn-dark" data-bs-target="#modelsCarousel" data-bs-slide="prev">
