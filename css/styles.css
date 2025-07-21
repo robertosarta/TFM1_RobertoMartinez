@@ -535,6 +535,20 @@
     cursor: pointer;
 }
 
+/* LEGAL ADVICE */
+.legal-main{
+    display: flex;
+    padding: 6rem 5rem 1rem 2rem;
+}
+
+.legal-main-container_left{
+    display: flex;
+    flex-direction: column;
+    width: 80rem;
+    padding: 3rem 1rem 0 0;
+    gap: 2rem;
+}
+
 
 /*MEDIA QUERIES*/
 @media (max-width: 970px) {
