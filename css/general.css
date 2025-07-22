@@ -60,11 +60,25 @@
     font-weight: normal;
 }
 
+.font-clean{
+    text-decoration: none;
+}
+
 /*MEDIA QUERIES*/
 @media (max-width: 768px) {
     .fs-header{
     font-size: 2rem;
     transition: 0.5s ease;
+    }
+
+    .fs-subtitle {
+        font-size: 1.2rem;
+        transition: 0.5s ease;
+    }
+
+    .fs-text {
+        font-size: 0.9rem;
+        transition: 0.5s ease;
     }
 }
 
