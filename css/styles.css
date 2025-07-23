@@ -73,6 +73,34 @@
     padding: 0.9rem 1rem 0rem;
 }
 
+.header-menu {
+    display: flex;
+}
+
+.header-menu div {
+    margin-right: 2.2rem;
+}
+
+.header-menu a {
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 0rem 0rem;
+    border-radius: 6px;
+    transition: color 0.3s ease;
+    margin-right: 0rem;
+}
+
+.header-menu i {
+    color: #e0e0e0;
+}
+
+.header-menu-link_container:hover .nav-text,
+.header-menu a:hover {
+    color: #2b2038;
+    transition: 0.1s ease;
+}
+
+
 /* DESPLEGABLE MENU */
 .desplegable-menu {
     position: fixed;
@@ -150,10 +178,6 @@
     cursor: pointer;
 }
 
-.nav-text {
-    text-decoration: none;
-}
-
 .desplegable-menu-bar_categories_container_title {
     width: 100%;
     height: 100%;
@@ -206,34 +230,6 @@
 }
 
 /* DESPLEGABLE MENU ENDS */
-
-.header-menu {
-    display: flex;
-}
-
-.header-menu div {
-    margin-right: 2.2rem;
-}
-
-.header-menu a {
-    color: #e0e0e0;
-    text-decoration: none;
-    padding: 0rem 0rem;
-    border-radius: 6px;
-    transition: color 0.3s ease;
-    margin-right: 0rem;
-}
-
-.header-menu i {
-    color: #e0e0e0;
-}
-
-.header-menu-link_container:hover .nav-text,
-.header-menu a:hover {
-    color: #2b2038;
-    transition: 0.1s ease;
-}
-
 
 /*MAIN SECTION*/
 .main {
@@ -508,6 +504,7 @@
     object-fit: cover;
 }
 
+/* FOOTER */
 .footer-container {
     display: flex;
     flex-direction: row;
@@ -620,7 +617,8 @@ height: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 0.4rem 1rem 0rem 1.5rem;
-    height: 3rem;
+    height: auto;
+    min-height: 3rem;
 }
 
 .model-info_reactions-container{
@@ -635,6 +633,9 @@ height: 100%;
     padding: 0rem 0.5rem 0rem 0.5rem;
 }
 
+.model-info_name{
+    overflow:hidden;
+}
 .model-info_name:hover{
     cursor: pointer;
 }
@@ -646,6 +647,15 @@ height: 100%;
 .bi-star-fill:hover{
     color: #f0ec17;
     cursor: pointer;
+}
+
+
+/*MEDIA QUERIES 1375*/
+@media (max-width: 1375px){
+    .footer-column {
+            gap: 0.5rem;
+            padding: 2rem;
+        }
 }
 
 /*MEDIA QUERIES 970*/
@@ -661,11 +671,6 @@ height: 100%;
         display: flex;
         flex-direction: column;
         background-color: #f8fafc;
-    }
-
-    .footer-column {
-        gap: 0.5rem;
-        padding: 2rem;
     }
 }
 
@@ -760,5 +765,10 @@ height: 100%;
     display: flex;
     flex-direction: column;
     padding: 0rem 2rem 1rem 1rem;
+}
+
+.model-info_name{
+    max-width: 7rem;
+    overflow: scroll;
 }
 }

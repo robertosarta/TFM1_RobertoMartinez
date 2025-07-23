@@ -10,6 +10,10 @@
 }
 
 /*  FONTS  */
+.nav-text {
+    text-decoration: none;
+}
+
 .font-white {
     color: white;
 }
