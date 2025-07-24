@@ -100,6 +100,18 @@
     transition: 0.1s ease;
 }
 
+.navbar{
+    padding-top: 4.5rem;
+    z-index: 1;
+}
+
+.container-fluid{
+    justify-content:space-around;
+}
+.filters-nav-left_container{
+    display: flex;
+    gap: 2rem;
+}
 
 /* DESPLEGABLE MENU */
 .desplegable-menu {
@@ -570,7 +582,7 @@
 }
 
 .model-section_title-container{
-margin: 0rem 0rem 1rem 2rem;
+padding: 3rem 0rem 1rem 2rem;
 width: 100%;
 height: 100%;
 }

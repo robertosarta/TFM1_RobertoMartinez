@@ -1,4 +1,4 @@
-fetch('https://api.sketchfab.com/v3/search?type=models&q=dragon', {
+fetch(`https://api.sketchfab.com/v3/search?type=models&${filter}`, {
     headers: {
         'Authorization': 'Token 6c0d4578e96b4b10b04fba257249d6a1'
     }
