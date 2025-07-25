@@ -1,7 +1,8 @@
 let cart = [];
 let savedCart = JSON.parse(localStorage.getItem('cart')); /*cuidado para debuggear esto no deja reiniciar los stats de las cards, starMarked no actualiza aunque hagas localStorage.clear()*/
+let nextPageSensor = false;
 
-if (savedCart){
+if (savedCart) {
     cart = savedCart   //actualiza el array desde el otro js
 }
 
@@ -26,7 +27,7 @@ function chooseImage(array) {
 function saveItemData(item) {
     if (cart.find(i => i.uid === item.uid)) {
         return;
-    }else {
+    } else {
         const savedItem = {
             picture: chooseImage(item.thumbnails.images).url,
             name: item.name,
@@ -40,11 +41,11 @@ function saveItemData(item) {
             tags: item.tags,
             starMarked: false
         };
-    cart.push(savedItem);
-    localStorage.setItem('cart', JSON.stringify(cart));
-    console.log("Item guardado:", savedItem);
+        cart.push(savedItem);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        console.log("Item guardado:", savedItem);
     }
-} 
+}
 
 function crearElemento(tipo, classElement, text, src, alt, aria) {
     const elem = document.createElement(tipo);
@@ -56,14 +57,32 @@ function crearElemento(tipo, classElement, text, src, alt, aria) {
     return elem;
 };
 
+const characterFilter = document.querySelectorAll(".filter_personajes");
+const creatureFilter = document.querySelectorAll(".filter_criaturas");
+
+characterFilter.forEach(button => {
+    button.addEventListener("click", () => {
+        nextPageSensor = false;
+        fetchFilter("character", createCard);
+    });
+});
+creatureFilter.forEach(button => {
+    button.addEventListener("click", () => {
+        nextPageSensor = false;
+        fetchFilter("creature", createCard);
+    });
+});
 const modelSection = document.querySelector(".model-section");
 function createCard(models) {
+    if (!nextPageSensor) {
+        modelSection.innerHTML = "";
+    }
     models.forEach(model => {
         const savedModel = cart.find(item => item.uid === model.uid);
         if (savedModel) {
             model.likeCount = savedModel.likeCount;
             model.starMarked = savedModel.starMarked;
-        }else {
+        } else {
             model.starMarked = false;
         }
 
@@ -101,40 +120,38 @@ function createCard(models) {
         modelInfoReactionsContainerComments.append(iconComments, commentCount);
         modelInfoReactionsContainerLikes.append(iconLikes, likesCount);
 
-        modelName.addEventListener("click", () =>{
+        modelName.addEventListener("click", () => {
             saveItemData(model);
         });
 
-        modelInfoReactionsContainerComments.addEventListener("click", () =>{
+        modelInfoReactionsContainerComments.addEventListener("click", () => {
             saveItemData(model);
             /*y hacer el link a la pagina de visualizacion*/
         });
 
-        modelInfoReactionsContainerLikes.addEventListener("click", () =>{
+        modelInfoReactionsContainerLikes.addEventListener("click", () => {
             if (model.starMarked) {
                 return;
             }
-            
+
             model.likeCount++
             model.starMarked = true;
 
             const itemInCart = cart.find(i => i.uid === model.uid);
             if (!itemInCart) {
-                cart.push({...model});
-            }else {
+                cart.push({ ...model });
+            } else {
                 itemInCart.likeCount = model.likeCount;
                 model.starMarked = true;
             }
             likesCount.textContent = model.likeCount
-            
+
             localStorage.setItem('cart', JSON.stringify(cart));
             console.log("Cart actualizado:", cart);
             console.log("HOLA")
         });
     });
 }
-
-
 
 let nextPageURL = null;
 function fetchFilter(filter, createCard, url = null) {
@@ -149,6 +166,7 @@ function fetchFilter(filter, createCard, url = null) {
             const models = data.results;
             createCard(models);
             nextPageURL = data.next;
+            nextPageSensor = true;
             console.log("Respuesta completa de la API:", data); /*PARA VER QUE ME DEVUELVE*/
         });
 
@@ -162,7 +180,5 @@ loadNext.addEventListener("click", () => {
         window.alert("No hay mas resultados");
     }
 });
-
-
 
 fetchFilter("demon", createCard);
