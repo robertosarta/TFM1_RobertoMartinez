@@ -100,11 +100,21 @@
     transition: 0.1s ease;
 }
 
+/* FILTERS NAVBAR */
 .navbar{
     padding-top: 4.5rem;
-    z-index: 1;
+    z-index: 100;
 }
 
+.navbar a:hover{
+    color: #9F7ACD;
+}
+.bg-dark{
+    background-color: #2b2038 !important;
+}
+.dropdown-menu-dark{
+    background-color: #2b2038;
+}
 .container-fluid{
     justify-content:space-around;
 }
@@ -112,6 +122,17 @@
     display: flex;
     gap: 2rem;
 }
+.btn-secondary {
+    background-color: #4C6FAD;
+    border: solid transparent;
+}
+
+.btn-secondary:hover {
+    background-color: #1E293B;
+    border: solid #1E293B;
+    transition: 0.4s ease;
+}
+/* FILTERS NAVBAR END */
 
 /* DESPLEGABLE MENU */
 .desplegable-menu {
@@ -521,7 +542,7 @@
     display: flex;
     flex-direction: row;
     background-color: #f8fafc;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .footer-column {
@@ -578,7 +599,7 @@
 /* CATALOG */
 
 .model-section_container{
-    padding: 6rem 1rem 1rem 1rem;
+    padding: 6rem 1rem 0rem 1rem;
 }
 
 .model-section_title-container{
@@ -602,6 +623,7 @@ height: 100%;
     height: 20rem;
     background-color: rgba(44, 62, 80, 0.2);
     border-radius: 2rem;
+    z-index: 1;
 }
 
 .model-card:hover{
@@ -611,6 +633,7 @@ height: 100%;
 .image-container{
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 .model-card-iframe{
@@ -628,7 +651,7 @@ height: 100%;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0.4rem 1rem 0rem 1.5rem;
+    padding: 0.9rem 1rem 0.4rem 1.5rem;
     height: auto;
     min-height: 3rem;
 }
@@ -643,6 +666,7 @@ height: 100%;
     display: flex;
     flex-direction: row;
     padding: 0rem 0.5rem 0rem 0.5rem;
+    gap: 0.2rem;
 }
 
 .model-info_name{
@@ -659,6 +683,24 @@ height: 100%;
 .bi-star-fill:hover{
     color: #f0ec17;
     cursor: pointer;
+}
+
+.model-section_bottom{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 6rem;
+}
+
+.bi-plus{
+    font-size: 5rem;
+    color: #2b2038;
+}
+.bi-plus:hover{
+    cursor: pointer;
+    color: #6C4EA2;
 }
 
 
@@ -781,6 +823,6 @@ height: 100%;
 
 .model-info_name{
     max-width: 7rem;
-    overflow: scroll;
+    overflow: hidden;
 }
 }
