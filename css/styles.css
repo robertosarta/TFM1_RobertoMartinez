@@ -101,27 +101,36 @@
 }
 
 /* FILTERS NAVBAR */
-.navbar{
+.navbar {
     padding-top: 4.5rem;
     z-index: 100;
 }
 
-.navbar a:hover{
+.navbar a:hover {
     color: #9F7ACD;
 }
-.bg-dark{
+
+.bg-dark {
     background-color: #2b2038 !important;
 }
-.dropdown-menu-dark{
+
+.dropdown-menu-dark {
     background-color: #2b2038;
 }
-.container-fluid{
-    justify-content:space-around;
+
+.container-fluid {
+    justify-content: space-around;
 }
-.filters-nav-left_container{
+
+.filters-nav-left_container {
+    display: flex;
+}
+
+.filters-nav-right_container {
     display: flex;
     gap: 2rem;
 }
+
 .btn-secondary {
     background-color: #4C6FAD;
     border: solid transparent;
@@ -590,7 +599,7 @@
     gap: 2rem;
 }
 
-.legal-main-container_right{
+.legal-main-container_right {
     display: flex;
     flex-direction: column;
     padding: 0rem 2rem 1rem 6rem;
@@ -598,25 +607,25 @@
 
 /* CATALOG */
 
-.model-section_container{
+.model-section_container {
     padding: 6rem 1rem 0rem 1rem;
 }
 
-.model-section_title-container{
-padding: 3rem 0rem 1rem 2rem;
-width: 100%;
-height: 100%;
+.model-section_title-container {
+    padding: 3rem 0rem 1rem 2rem;
+    width: 100%;
+    height: 100%;
 }
 
-.model-section{
+.model-section {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 2rem;
 }
 
-.model-card{
+.model-card {
     display: flex;
     flex-direction: column;
     width: 34rem;
@@ -626,27 +635,27 @@ height: 100%;
     z-index: 1;
 }
 
-.model-card:hover{
+.model-card:hover {
     background-color: #2b2038;
 }
 
-.image-container{
+.image-container {
     height: 100%;
     width: 100%;
     overflow: hidden;
 }
 
-.model-card-iframe{
+.model-card-iframe {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.model-card-iframe:hover{
+.model-card-iframe:hover {
     cursor: pointer;
 }
 
-.model-info-container{
+.model-info-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -656,36 +665,38 @@ height: 100%;
     min-height: 3rem;
 }
 
-.model-info_reactions-container{
+.model-info_reactions-container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-.model-info_reactions-container_element{
+.model-info_reactions-container_element {
     display: flex;
     flex-direction: row;
     padding: 0rem 0.5rem 0rem 0.5rem;
     gap: 0.2rem;
 }
 
-.model-info_name{
-    overflow:hidden;
+.model-info_name {
+    overflow: hidden;
 }
-.model-info_name:hover{
+
+.model-info_name:hover {
     cursor: pointer;
 }
-.bi-chat-fill:hover{
+
+.bi-chat-fill:hover {
     color: #1E293B;
     cursor: pointer;
 }
 
-.bi-star-fill:hover{
+.bi-star-fill:hover {
     color: #f0ec17;
     cursor: pointer;
 }
 
-.model-section_bottom{
+.model-section_bottom {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -694,22 +705,28 @@ height: 100%;
     gap: 6rem;
 }
 
-.bi-plus{
+.bi-plus {
     font-size: 5rem;
     color: #2b2038;
 }
-.bi-plus:hover{
+
+.bi-plus:hover {
     cursor: pointer;
     color: #6C4EA2;
 }
 
 
 /*MEDIA QUERIES 1375*/
-@media (max-width: 1375px){
+@media (max-width: 1375px) {
     .footer-column {
-            gap: 0.5rem;
-            padding: 2rem;
-        }
+        gap: 0.5rem;
+        padding: 2rem;
+    }
+}
+
+/* PRODUCT */
+.product-api{
+    border: solid yellow;
 }
 
 /*MEDIA QUERIES 970*/
@@ -759,6 +776,14 @@ height: 100%;
         align-items: center;
         padding: 0.3rem 1rem 0.5rem 0.5rem;
         gap: 0.5rem;
+    }
+
+    .container-fluid{
+        justify-content: flex-end !important;
+    }
+
+    .filters-nav-left_container {
+        display: none;
     }
 
     .presentation-iframe_container {
@@ -815,14 +840,14 @@ height: 100%;
         gap: 2rem;
     }
 
-    .legal-main-container_right{
-    display: flex;
-    flex-direction: column;
-    padding: 0rem 2rem 1rem 1rem;
-}
+    .legal-main-container_right {
+        display: flex;
+        flex-direction: column;
+        padding: 0rem 2rem 1rem 1rem;
+    }
 
-.model-info_name{
-    max-width: 7rem;
-    overflow: hidden;
-}
+    .model-info_name {
+        max-width: 7rem;
+        overflow: hidden;
+    }
 }

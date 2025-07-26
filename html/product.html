@@ -22,6 +22,7 @@
     <div id="stars-js" class="background-layer"></div>
     <div id="stars-js2" class="background-layer"></div>
     <div id="stars-js3" class="background-layer"></div>
+
     <!--  HEADER  -->
     <header class="header">
         <button class="menu-button" id="menuButton">
@@ -52,94 +53,6 @@
             </div>
         </nav>
     </header>
-    <!--  HEADER END  -->
-
-    <!-- FILTERS NAVBAR -->
-    <nav class="navbar navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-            <div class=" align-items-center gap-3 flex-wrap filters-nav-left_container">
-                <a class="navbar-brand font-title filter_personajes" href="#">PERSONAJES</a>
-                <a class="navbar-brand font-title filter_criaturas" href="#">CRIATURAS</a>
-                <a class="navbar-brand font-title filter_estructuras" href="#">ESTRUCTURAS</a>
-                <div class="dropdown">
-                    <a class="navbar-brand dropdown-toggle font-title" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        EXPLORA
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item fs-text font-title filter_popular" href="#">Populares</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item font-title filter_animales" href="#">Animales y mascotas</a></li>
-                        <li><a class="dropdown-item font-title filter_arquitectura" href="#">Arquitectura</a></li>
-                        <li><a class="dropdown-item font-title filter_vehiculos" href="#">vehiculos</a></li>
-                        <li><a class="dropdown-item font-title filter_criaturas" href="#">Criaturas</a></li>
-                        <li><a class="dropdown-item font-title filter_personajes" href="#">Personajes</a></li>
-                        <li><a class="dropdown-item font-title filter_historico" href="#">Historico</a></li>
-                        <li><a class="dropdown-item font-title filter_electronica" href="#">Electrónica y gadgets</a></li>
-                        <li><a class="dropdown-item font-title filter_estilo" href="#">Estilo</a></li>
-                        <li><a class="dropdown-item font-title filter_comida" href="#">Comida</a></li>
-                        <li><a class="dropdown-item font-title filter_decoracion" href="#">Decoración hogar</a></li>
-                        <li><a class="dropdown-item font-title filter_plantas" href="#">Plantas</a></li>
-                        <li><a class="dropdown-item font-title filter_armas" href="#">Armas</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="filters-nav-right_container">
-                <!-- SEARCH -->
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="filters-input_search">
-                    <button class="btn btn-secondary font-title font-black" type="submit" id="filters-button_search">Buscar</button>
-                </form>
-                <!-- SEARCH END -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                    aria-labelledby="offcanvasDarkNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body dropdown-menu-dark">
-                        <form class="d-flex mt-3" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-primary font-title font-black" type="submit">Buscar</button>
-                        </form>
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item fs-text font-title filter_popular" href="#">Populares</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item font-title filter_animales" href="#">Animales y mascotas</a></li>
-                                    <li><a class="dropdown-item font-title filter_arquitectura" href="#">Arquitectura</a></li>
-                                    <li><a class="dropdown-item font-title filter_vehiculos" href="#">vehiculos</a></li>
-                                    <li><a class="dropdown-item font-title filter_criaturas" href="#">Criaturas</a></li>
-                                    <li><a class="dropdown-item font-title filter_personajes" href="#">Personajes</a></li>
-                                    <li><a class="dropdown-item font-title filter_historico" href="#">Historico</a></li>
-                                    <li><a class="dropdown-item font-title filter_electronica" href="#">Electrónica y gadgets</a></li>
-                                    <li><a class="dropdown-item font-title filter_estilo" href="#">Estilo</a></li>
-                                    <li><a class="dropdown-item font-title filter_comida" href="#">Comida</a></li>
-                                    <li><a class="dropdown-item font-title filter_decoracion" href="#">Decoración hogar</a></li>
-                                    <li><a class="dropdown-item font-title filter_plantas" href="#">Plantas</a></li>
-                                    <li><a class="dropdown-item font-title filter_armas" href="#">Armas</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- FILTERS NAVBAR CLOSE -->
-
     <!--  HEADER END  -->
     <!-- DESPLEGABLE MENU (lo saque fuera para que el zindex del header no interfiriese y poder maquetarlo, no se si esta bien hecho asi)-->
     <div class="desplegable-menu" id="desplegable-menu">
@@ -203,20 +116,26 @@
         </div>
     </div>
     <!-- DESPLEGABLE MENU END -->
+
     <!-- MAIN -->
-    <main class="catalog-main">
-        <div class="model-section_container">
-            <div class="model-section_title-container">
-                <h2 class="model-section_title font-white font-title fs-subtitle">Models</h2>
+    <main class="main" id="main-product">
+        <div class="model-section">
+            <div>
+                <iframe class="product-api" id="product-api_frame"
+                    allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen mozallowfullscreen="true"
+                    webkitallowfullscreen="true">
+                </iframe>
             </div>
-            <div class="model-section font-white">
-                <!-- AQUI VAN TODOS LOS MODELOS GENERADOS EN CARD CON .JS -->
+            <div>
+                <!-- CAJA NOMBRE, DATOS ETC -->
             </div>
-            <div class="model-section_bottom">
-                <i class="bi bi-plus model-section_load-next"></i>
-            </div>
+        </div>
+        <div>
+            <!-- Aqui pintar resto de cards similares -->
+        </div>
     </main>
-    <!-- MAIN ENDS -->
+    <!-- MAIN END -->
+</body>
     <!-- FOOTER -->
     <footer>
         <div class="footer-container">
@@ -267,6 +186,7 @@
     <!-- FOOTER END -->
     <!-- SCRIPTS -->
     <script src="/javaScript/catalog.js"></script>
+    <script src="/javaScript/product.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
@@ -274,5 +194,4 @@
     <script src="/javaScript/script.js"></script>
     <script src="/javaScript/scriptBackground.js"></script>
 </body>
-
 </html>
