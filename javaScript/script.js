@@ -23,4 +23,10 @@ document.querySelectorAll('.card-custom').forEach(card => {
     })
 });
 
+document.getElementById("catalogButton").addEventListener("click", () => {
+    sessionStorage.setItem("catalogInit", "true");
+    window.location.href = "./html/catalog.html";
+})
+
+
 

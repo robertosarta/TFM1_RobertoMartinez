@@ -725,8 +725,38 @@
 }
 
 /* PRODUCT */
+.product-section {
+    padding: 4rem 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+.product-section_left{
+    border: solid red;
+    width: 100%;
+    height: 100%;
+}
+.product-section_right{
+    border: solid red;
+    width: 30rem;
+    height: 70rem;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.product-api_container{
+    width: auto;
+    height: 40rem;
+}
 .product-api{
+    width: 100%;
+    height: 100%;
     border: solid yellow;
+}
+.product-api_content{
+    width: 100%;
+    height: 100%;
+    border: solid rgb(30, 255, 0);
 }
 
 /*MEDIA QUERIES 970*/

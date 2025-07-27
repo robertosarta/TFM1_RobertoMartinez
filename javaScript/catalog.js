@@ -63,8 +63,11 @@ function crearElemento(tipo, classElement, text, src, alt, aria) {
 function assignFilter(elem, filter) {
     elem.forEach(button => {
         button.addEventListener("click", () => {
-        nextPageSensor = false;
-        fetchFilter(filter, createCard);
+            nextPageSensor = false;
+            sessionStorage.setItem("catalogInit", "true");
+            sessionStorage.setItem("selectedFilter", filter);
+            sessionStorage.setItem("popularActive", "false");
+            window.location.href = "./catalog.html"
     });
     });
 };
@@ -99,14 +102,20 @@ assignFilter(filterWeapons, "weapon");
 popularFilter.forEach(button => {
     button.addEventListener("click", () => {
         nextPageSensor = false;
-        fetchFilter("", createCard, null, true);
+        sessionStorage.setItem("catalogInit", "true");
+        sessionStorage.setItem("selectedFilter", filtersInput.value);
+        sessionStorage.setItem("popularActive", "true");
+        window.location.href = "./catalog.html"
     });
 });
 
 function searchFilter() {
     const inputvalue = filtersInput.value;
     nextPageSensor = false;
-    fetchFilter(inputvalue, createCard);
+    sessionStorage.setItem("catalogInit", "true");
+    sessionStorage.setItem("selectedFilter", filtersInput.value);
+    sessionStorage.setItem("popularActive", "false");
+    window.location.href = "./catalog.html"
 };
 filtersButton.addEventListener('click', searchFilter);
 filtersInput.addEventListener('keydown', (e) => {
@@ -166,20 +175,20 @@ function createCard(models) {
 
         imageContainer.addEventListener("click", () => {
             saveItemData(model);
-            localStorage.setItem('selectedUID', model.uid);
+            localStorage.setItem('productModel', JSON.stringify(model));
             window.location.href = "./product.html";
         });
 
         modelName.addEventListener("click", () => {
             saveItemData(model);
-            localStorage.setItem('selectedUID', model.uid);
+            localStorage.setItem('productModel', JSON.stringify(model));
             window.location.href = "./product.html";
         });
 
         modelInfoReactionsContainerComments.addEventListener("click", () => {
             saveItemData(model);
-            localStorage.setItem('selectedUID', model.uid);
-            window.location.href = "./html/product.html#seccionEspecial";
+            localStorage.setItem('productModel', JSON.stringify(model));
+            window.location.href = "./product.html#seccionComentarios";
         });
 
         modelInfoReactionsContainerLikes.addEventListener("click", () => {
@@ -211,7 +220,7 @@ function fetchFilter(filter, createCard, url = null, filterPopular = false) {
     if (url) {
         apiUrl = url;
     }else if (filterPopular) {
-        apiUrl = url || 'https://api.sketchfab.com/v3/search?type=models&sort_by=-likeCount&count=24'
+        apiUrl = url || 'https://api.sketchfab.com/v3/search?type=models&sort_by=-likeCount&count=24' /*como cambiaba mucho el link hice una variable aparte con true/false para elegirla en caso de ese unico filtro (popular)*/
     }else {
         apiUrl = url || `https://api.sketchfab.com/v3/search?type=models&q=${filter}&count=24`
     }
@@ -239,4 +248,25 @@ loadNext.addEventListener("click", () => {
     }
 });
 
-fetchFilter("demon", createCard);
+document.getElementById("catalogButton").addEventListener("click", () => {
+    sessionStorage.setItem("catalogInit", "true");
+    sessionStorage.removeItem("selectedFilter");
+    window.location.href = "./catalog.html";
+})
+
+document.addEventListener("DOMContentLoaded", () => {
+    const catalogInit = sessionStorage.getItem("catalogInit");
+    const filterParam = sessionStorage.getItem("selectedFilter");
+    const popularActive = sessionStorage.getItem("popularActive");
+    if(catalogInit === "true") {
+        if(popularActive === "true") {
+            fetchFilter("", createCard, null, true);
+        }else if (filterParam){
+            fetchFilter(filterParam, createCard);
+        }else {
+            fetchFilter("demon", createCard);
+        }
+        sessionStorage.setItem("catalogInit", "false");
+    }
+});
+
