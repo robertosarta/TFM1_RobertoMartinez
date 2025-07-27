@@ -4,6 +4,9 @@ let nextPageSensor = false;
 let isPopularActive = false;
 let filtersInput = document.getElementById("filters-input_search");
 let filtersButton = document.getElementById("filters-button_search");
+let filtersInputDesplegable = document.getElementById("filters-input_search_desplegable");
+let filtersButtonDesplegable = document.getElementById("filters-button_search_desplegable");
+const modelSection = document.querySelector(".model-section");
 
 if (savedCart) {
     cart = savedCart   //actualiza el array desde el otro js
@@ -110,23 +113,35 @@ popularFilter.forEach(button => {
 });
 
 function searchFilter() {
-    const inputvalue = filtersInput.value;
     nextPageSensor = false;
     sessionStorage.setItem("catalogInit", "true");
     sessionStorage.setItem("selectedFilter", filtersInput.value);
     sessionStorage.setItem("popularActive", "false");
     window.location.href = "./catalog.html"
 };
+function searchFilterDesplegable() {
+    nextPageSensor = false;
+    sessionStorage.setItem("catalogInit", "true");
+    sessionStorage.setItem("selectedFilter", filtersInputDesplegable.value);
+    sessionStorage.setItem("popularActive", "false");
+    window.location.href = "./catalog.html"
+};
 filtersButton.addEventListener('click', searchFilter);
 filtersInput.addEventListener('keydown', (e) => {
-    if (e.key === 'enter'){
+    if (e.key === 'Enter'){
         searchFilter();
+    }
+});
+filtersButtonDesplegable.addEventListener('click', searchFilterDesplegable);
+filtersInputDesplegable.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter'){
+        searchFilterDesplegable();
     }
 });
 
 
-const modelSection = document.querySelector(".model-section");
-function createCard(models) {
+
+function createCard(models, isProductPage = false) {
     if (!nextPageSensor) {
         modelSection.innerHTML = "";
     }
@@ -172,6 +187,11 @@ function createCard(models) {
         modelInfoReactionsContainerViews.append(iconViews, viewCount);
         modelInfoReactionsContainerComments.append(iconComments, commentCount);
         modelInfoReactionsContainerLikes.append(iconLikes, likesCount);
+
+        if (isProductPage) {
+            modelCard.classList.remove("model-card");
+            modelCard.classList.add("products-model-card");
+        }
 
         imageContainer.addEventListener("click", () => {
             saveItemData(model);
@@ -239,21 +259,6 @@ function fetchFilter(filter, createCard, url = null, filterPopular = false) {
         });
 };
 
-const loadNext = document.querySelector(".model-section_load-next");
-loadNext.addEventListener("click", () => {
-    if (nextPageURL) {
-        fetchFilter(null, createCard, nextPageURL, isPopularActive)
-    } else {
-        window.alert("No hay mas resultados");
-    }
-});
-
-document.getElementById("catalogButton").addEventListener("click", () => {
-    sessionStorage.setItem("catalogInit", "true");
-    sessionStorage.removeItem("selectedFilter");
-    window.location.href = "./catalog.html";
-})
-
 document.addEventListener("DOMContentLoaded", () => {
     const catalogInit = sessionStorage.getItem("catalogInit");
     const filterParam = sessionStorage.getItem("selectedFilter");
@@ -269,4 +274,21 @@ document.addEventListener("DOMContentLoaded", () => {
         sessionStorage.setItem("catalogInit", "false");
     }
 });
+
+
+const loadNext = document.querySelector(".model-section_load-next");
+loadNext.addEventListener("click", () => {
+    if (nextPageURL) {
+        fetchFilter(null, createCard, nextPageURL, isPopularActive)
+    } else {
+        window.alert("No hay mas resultados");
+    }
+});
+
+document.getElementById("catalogButton").addEventListener("click", () => {
+    sessionStorage.setItem("catalogInit", "true");
+    sessionStorage.removeItem("selectedFilter");
+    window.location.href = "./catalog.html";
+})
+
 

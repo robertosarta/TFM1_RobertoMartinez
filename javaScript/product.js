@@ -3,12 +3,30 @@ let clientProduct;
 let productModelUid;
 let productModel;
 let productModelTags;
+let filtersInputProducts = document.getElementById("filters-input_search_products");
+let filtersButtonProducts = document.getElementById("filters-button_search_products");
 function catchTags(model) {
     productModelTags = [];
     for (let index = 0; index < model.tags.length && index < 2; index++) {
         productModelTags.push(model.tags[index].name);
     }
 }
+
+function searchFilter() {
+    nextPageSensor = false;
+    sessionStorage.setItem("catalogInit", "true");
+    sessionStorage.setItem("selectedFilter", filtersInputProducts.value);
+    sessionStorage.setItem("popularActive", "false");
+    window.location.href = "./catalog.html"
+};
+
+
+filtersButtonProducts.addEventListener('click', searchFilter);
+filtersInputProducts.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter'){
+        searchFilter();
+    }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
     iframeProduct = document.getElementById(`product-api_frame`);
@@ -21,11 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     productModel = JSON.parse(productModelString);
     /*lo dejo accesible parseado*/
-    
     productModelUid = productModel.uid;
     catchTags(productModel);
-    fetchFilter(productModelTags, createCard);
-
+    fetchFilter(productModelTags, (models) => createCard(models, true));
     console.log(productModelTags);
     clientProduct.init(productModelUid, {
         success: function onSuccess(api) {
@@ -41,3 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     });
 })
+
+
+

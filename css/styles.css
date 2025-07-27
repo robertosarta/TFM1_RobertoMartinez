@@ -740,9 +740,19 @@
 .product-section_right{
     border: solid red;
     width: 30rem;
-    height: 70rem;
+    height: 55.7rem;
     overflow: scroll;
     overflow-x: hidden;
+    padding: 0.5rem;
+}
+.products-model-card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20rem;
+    background-color: rgba(44, 62, 80, 0.2);
+    border-radius: 2rem;
+    z-index: 1;
 }
 .product-api_container{
     width: auto;
