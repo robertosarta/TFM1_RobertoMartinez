@@ -68,6 +68,11 @@
     text-decoration: none;
 }
 
+.font-hover:hover{
+    cursor: pointer;
+    color: #9F7ACD;
+}
+
 /*MEDIA QUERIES*/
 @media (max-width: 768px) {
     .fs-header{

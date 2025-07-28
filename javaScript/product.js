@@ -21,7 +21,7 @@ function searchFilter() {
 };
 
 
-filtersButtonProducts.addEventListener('click', searchFilter);
+filtersButtonProducts.addEventListener('click', () => {searchFilter()});
 filtersInputProducts.addEventListener('keydown', (e) => {
     if (e.key === 'Enter'){
         searchFilter();

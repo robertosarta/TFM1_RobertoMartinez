@@ -23,7 +23,6 @@
     <div id="stars-js" class="background-layer"></div>
     <div id="stars-js2" class="background-layer"></div>
     <div id="stars-js3" class="background-layer"></div>
-
     <!--  HEADER  -->
     <header class="header">
         <button class="menu-button" id="menuButton">
@@ -55,104 +54,6 @@
         </nav>
     </header>
     <!--  HEADER END  -->
-    <!-- FILTERS NAVBAR -->
-    <nav class="navbar navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-            <div class=" align-items-center gap-3 flex-wrap filters-nav-left_container">
-                <a class="navbar-brand font-title filter_personajes" href="#">PERSONAJES</a>
-                <a class="navbar-brand font-title filter_criaturas" href="#">CRIATURAS</a>
-                <a class="navbar-brand font-title filter_estructuras" href="#">ESTRUCTURAS</a>
-                <div class="dropdown">
-                    <a class="navbar-brand dropdown-toggle font-title" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        EXPLORA
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item fs-text font-title filter_popular" href="#">Populares</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item font-title filter_animales" href="#">Animales y mascotas</a></li>
-                        <li><a class="dropdown-item font-title filter_arquitectura" href="#">Arquitectura</a></li>
-                        <li><a class="dropdown-item font-title filter_vehiculos" href="#">vehiculos</a></li>
-                        <li><a class="dropdown-item font-title filter_criaturas" href="#">Criaturas</a></li>
-                        <li><a class="dropdown-item font-title filter_personajes" href="#">Personajes</a></li>
-                        <li><a class="dropdown-item font-title filter_historico" href="#">Historico</a></li>
-                        <li><a class="dropdown-item font-title filter_electronica" href="#">Electrónica y gadgets</a>
-                        </li>
-                        <li><a class="dropdown-item font-title filter_estilo" href="#">Estilo</a></li>
-                        <li><a class="dropdown-item font-title filter_comida" href="#">Comida</a></li>
-                        <li><a class="dropdown-item font-title filter_decoracion" href="#">Decoración hogar</a></li>
-                        <li><a class="dropdown-item font-title filter_plantas" href="#">Plantas</a></li>
-                        <li><a class="dropdown-item font-title filter_armas" href="#">Armas</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="filters-nav-right_container">
-                <!-- SEARCH -->
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
-                        id="filters-input_search_products">
-                    <button class="btn btn-secondary font-title font-black" type="submit"
-                        id="filters-button_search_products">Buscar</button>
-                </form>
-                <!-- SEARCH END -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                    aria-labelledby="offcanvasDarkNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body dropdown-menu-dark">
-                        <form class="d-flex mt-3" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-primary font-title font-black" type="submit">Buscar</button>
-                        </form>
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item fs-text font-title filter_popular"
-                                            href="#">Populares</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item font-title filter_animales" href="#">Animales y
-                                            mascotas</a></li>
-                                    <li><a class="dropdown-item font-title filter_arquitectura"
-                                            href="#">Arquitectura</a></li>
-                                    <li><a class="dropdown-item font-title filter_vehiculos" href="#">vehiculos</a></li>
-                                    <li><a class="dropdown-item font-title filter_criaturas" href="#">Criaturas</a></li>
-                                    <li><a class="dropdown-item font-title filter_personajes" href="#">Personajes</a>
-                                    </li>
-                                    <li><a class="dropdown-item font-title filter_historico" href="#">Historico</a></li>
-                                    <li><a class="dropdown-item font-title filter_electronica" href="#">Electrónica y
-                                            gadgets</a></li>
-                                    <li><a class="dropdown-item font-title filter_estilo" href="#">Estilo</a></li>
-                                    <li><a class="dropdown-item font-title filter_comida" href="#">Comida</a></li>
-                                    <li><a class="dropdown-item font-title filter_decoracion" href="#">Decoración
-                                            hogar</a></li>
-                                    <li><a class="dropdown-item font-title filter_plantas" href="#">Plantas</a></li>
-                                    <li><a class="dropdown-item font-title filter_armas" href="#">Armas</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <!-- FILTERS NAVBAR CLOSE -->
-
     <!-- DESPLEGABLE MENU (lo saque fuera para que el zindex del header no interfiriese y poder maquetarlo, no se si esta bien hecho asi)-->
     <div class="desplegable-menu" id="desplegable-menu">
         <div class="desplegable-menu-bar_busqueda">
@@ -217,40 +118,125 @@
         </div>
     </div>
     <!-- DESPLEGABLE MENU END -->
-
     <!-- MAIN -->
-    <main class="main" id="main-product">
-        <div class="product-section">
-            <div class="product-section_left">
-                <div class="product-api_container">
-                    <iframe class="product-api" id="product-api_frame" allow="autoplay; fullscreen; xr-spatial-tracking"
-                        allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true">
-                    </iframe>
-                </div>
-                <div class="product-api_content font-white">
-                    <!-- CAJA NOMBRE, DATOS ETC -->
-                    <div></div>
-                    <p>sgsegwrgw</p>
-                    <p>sgsegwrgw</p>
-                    <p>sgsegwrgw</p>
-                    <p>sgsegwrgw</p>
-                    <p>sgsegwrgw</p>
-                    <p>sgsegwrgw</p>
-                </div>
+    <main class="main">
+        <div class="font-white contact-main_container">
+            <div class="contact-presentation_container">
+                <h6 class="font-text">ACERCA DE DREAMVEIL</h6>
+                <h2 class="font-title">Entra en el velo</h2>
             </div>
-            <div class="product-section_right">
-                <div class="model-section font-white">
+            <div class="contact-presentation-image_container">
+                <img class="contact-presentation-image" src="/images/sandmanTransparency.png" alt="imagen de Sandman">
+            </div>
+            <div>
+                <div class="contact-presentation_stats_container">
+                    <div>
+                        <h1 class="font-title">6M+</h1>
+                        <h6 class="font-text">MODELOS 3D</h6>
+                    </div>
+                    <div>
+                        <h1 class="font-title">15M+</h1>
+                        <h6 class="font-text">USUARIOS REGISTRADOS</h6>
+                    </div>
+                    <div>
+                        <h1 class="font-title">6M+</h1>
+                        <h6 class="font-text">VISITAS MENSUALES</h6>
+                    </div>
+                    <div>
+                        <h1 class="font-title">3B+</h1>
+                        <h6 class="font-text">VISITAS A LA PAGINA DESDE SU LANZAMIENTO</h6>
+                    </div>
                 </div>
-                <!-- Aqui pintar resto de cards similares -->
+                <div class="contact-presentation_resume_container">
+                    <p class="fs-text font-text contact-text_box">
+                        DreamVeil está dando vida a un universo onírico al facilitar que cualquier persona pueda
+                        explorar,
+                        compartir y descubrir modelos 3D inspirados en sueños y pesadillas. Con una comunidad creciente
+                        de
+                        artistas visionarios que han publicado miles de creaciones etéreas, somos la mayor plataforma
+                        dedicada al arte inmersivo del mundo del sueño. Además, nuestro mercado permite a
+                        compradores y creadores intercambiar modelos con confianza, gracias a nuestro visor 3D en tiempo
+                        real y a nuestro detallado inspector de modelos.
+                    </p>
+                    <p class="fs-text font-text contact-text_box">
+                        Nuestra tecnología está integrada con las principales herramientas de creación 3D y plataformas
+                        de
+                        publicación, y es compatible con todos los navegadores, sistemas operativos y dispositivos
+                        móviles y
+                        de escritorio. También ofrecemos soporte para experiencias de realidad virtual y aumentada en
+                        hardware compatible. Nuestras potentes APIs permiten a los desarrolladores cargar y descargar
+                        modelos directamente, así como personalizar nuestro visor 3D embebible para adaptarlo a
+                        cualquier
+                        entorno, ya sea un sueño sereno o una pesadilla inquietante.
+                    </p>
+                </div>
             </div>
         </div>
-        
+        <div class="contact-story_container font-white">
+            <h2 class="font-title">INICIOS</h2>
+            <div class="contact-presentation_story_container">
+                <p class="fs-text font-text contact-text_box">
+                    Fundé dreamVeil en Sartaguda, Navarra, a comienzos de 2021. Me sentía frustrado al ver que tantos
+                    artistas e ilustradores de sueños invertían horas en dar forma a visiones oníricas en 3D, solo para
+                    acabar compartiéndolas mediante simples imágenes estáticas, sin poder transmitir la verdadera
+                    atmósfera de sus creaciones. Así nació dreamVeil: un espacio para que los mundos soñados puedan
+                    experimentarse de forma inmersiva e interactiva. Mi comunidad creció rápidamente y se convirtió en
+                    una mezcla fascinante de artistas digitales, escritores de sueños, diseñadores conceptuales,
+                    psicólogos, narradores, estudios de videojuegos, universidades y más.
+                </p>
+                <p class="fs-text font-text contact-text_box">
+                    Hoy en día, con herramientas creativas accesibles como Quill, Dreams de PlayStation o incluso
+                    escaneos 3D desde móviles, cualquiera puede plasmar sus sueños —o pesadillas— en modelos
+                    tridimensionales. Mi objetivo es hacer que los sueños cobren vida como un nuevo medio artístico, y
+                    llevar el 3D onírico al corazón de la cultura digital. Quiero que soñar y compartir en 3D sea tan
+                    natural como contar un cuento antes de dormir.
+                </p>
+            </div>
+        </div>
     </main>
     <!-- MAIN END -->
-
     <!-- FOOTER -->
     <footer>
-        <div class="footer-container">
+        <div class="contact-info-section font-white" id="contact-info-section">
+            <div class="contact-info_container">
+                <h3 class="font-title contact-info_container_title">CONTACTA CON NOSOTROS</h3>
+                <div class="contact-info_container_office">
+                    <h5 class="font-title">
+                        OFICINAS
+                    </h5>
+                    <div class="contact-info_right_container">
+                        <a class="font-clean font-white font-text fs-text font-hover" href="">Sartaguda, Navarra, España</a>
+                        <a class="font-clean font-white font-text fs-text font-hover" href="">+34 608548751</a>
+                    </div>
+                    
+                </div>
+                <div class="contact-info_container_office">
+                    <h5 class="font-title">
+                        TALLER DE IMPRESION 3D
+                    </h5>
+                    <div class="contact-info_right_container">
+                        <a class="font-clean font-white font-text fs-text font-hover" href="">31290 Estella-Lizarra, Navarra</a>
+                        <a class="font-clean font-white font-text fs-text font-hover" href="">+34 609154786</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-info_container">
+                <div class="contact-info_container_down">
+                    <h5 class="font-title">AYUDA</h5>
+                    <a class="font-clean font-white font-text fs-text font-hover" href="">Contactar Soporte</a>
+                </div>
+                <div class="contact-info_container_down">
+                    <h5 class="font-title">SIGUENOS</h5>
+                    <div class="contact-info_container_down_icons">
+                        <i class="bi bi-instagram font-hover"></i>
+                        <i class="bi bi-facebook font-hover"></i>
+                        <i class="bi bi-tiktok font-hover"></i>
+                        <i class="bi bi-linkedin font-hover"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-container_contact">
             <div class="footer-column">
                 <h3 class="fs-subtitle font-title font-black">SUSCRIBETE</h3>
                 <p class="fs-text font-text font-black">
@@ -300,14 +286,12 @@
     </footer>
     <!-- FOOTER END -->
     <!-- SCRIPTS -->
-    <script src="/javaScript/catalog.js"></script>
-    <script src="/javaScript/product.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
     <script src="/javaScript/script.js"></script>
     <script src="/javaScript/scriptBackground.js"></script>
+    <script src="/javaScript/scriptVisor.js"></script>
 </body>
 
 </html>

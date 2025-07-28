@@ -126,13 +126,13 @@ function searchFilterDesplegable() {
     sessionStorage.setItem("popularActive", "false");
     window.location.href = "./catalog.html"
 };
-filtersButton.addEventListener('click', searchFilter);
+filtersButton.addEventListener('click', () => {searchFilter()});
 filtersInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter'){
         searchFilter();
     }
 });
-filtersButtonDesplegable.addEventListener('click', searchFilterDesplegable);
+filtersButtonDesplegable.addEventListener('click', () => {searchFilterDesplegable()});
 filtersInputDesplegable.addEventListener('keydown', (e) => {
     if (e.key === 'Enter'){
         searchFilterDesplegable();

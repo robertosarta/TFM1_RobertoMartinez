@@ -38,7 +38,7 @@
         <div class="header-title">
             <a href="/index.html" class="font-clean">
                 <h1 class="font-white font-text font-navbar-title fs-header">DREAMVEIL</h1>
-            </a> 
+            </a>
         </div>
         <nav class="header-menu font-text" id="header-menu">
             <div class="header-menu-link_container">
@@ -107,8 +107,11 @@
             <div class="desplegable-menu-bar_categories_">
                 <h2 class="fs-text font-white font-title">Nuestro equipo</h2>
             </div>
-            <a href="" class="fs-text font-white font-text">Contacta con nosotros</a>
-            <a href="/html/legalAdvice.html#terminos-condiciones" class="fs-text font-white font-text">Términos y condiciones de venta</a>
+            <a href="/html/contactUs.html" class="fs-text font-white font-text">Acerca de DreamVeil</a>
+            <a href="/html/contactUs.html#contact-info-section" class="fs-text font-white font-text">Contacta con
+                nosotros</a>
+            <a href="/html/legalAdvice.html#terminos-condiciones" class="fs-text font-white font-text">Términos y
+                condiciones de venta</a>
             <a href="/html/legalAdvice.html#aviso-cookies" class="fs-text font-white font-text">Política de cookies</a>
             <a href="" class="fs-text font-white font-text">Entregas</a>
             <a href="" class="fs-text font-white font-text">Devoluciones</a>
@@ -177,7 +180,7 @@
                     catalogo de figuras únicas para comprar o imprimir en casa
                 </p>
                 <div class="card-button_container">
-                        <button class="btn btn-primary font-title font-black" type="submit">TIENDA</button>
+                    <button class="btn btn-primary font-title font-black" id="shop-button" type="submit">TIENDA</button>
                 </div>
             </div>
         </div>
@@ -331,13 +334,14 @@
         <!-- MAIN STRUCTURES SECTION -->
         <div class="main-structures-composition">
             <div class="main-structures-titlebox_container">
-                    <img class="main-structures-titlebox_image" src="/images/dreamVeilSymbol_white.png"
-                        alt="Logo de DreamVeil">
-                    <h2 class="main-structures-titlebox_text font-white font-title fs-subtitle">DESCUBRE NUESTRAS CRIATURAS Y PESADILLAS</h2>
-                    <p class="main-structures-titlebox_text font-white font-text fs-text">
-                        Cada criatura ha sido diseñada con detalle y creatividad. Descubre seres fantásticos y únicos 
-                        que haran que tus sueños o pesadillas cobren vida, y añádelos a tu colección cuanto antes.
-                    </p>
+                <img class="main-structures-titlebox_image" src="/images/dreamVeilSymbol_white.png"
+                    alt="Logo de DreamVeil">
+                <h2 class="main-structures-titlebox_text font-white font-title fs-subtitle">DESCUBRE NUESTRAS CRIATURAS
+                    Y PESADILLAS</h2>
+                <p class="main-structures-titlebox_text font-white font-text fs-text">
+                    Cada criatura ha sido diseñada con detalle y creatividad. Descubre seres fantásticos y únicos
+                    que haran que tus sueños o pesadillas cobren vida, y añádelos a tu colección cuanto antes.
+                </p>
                 <div class="card-button_container">
                     <a href="########">
                         <button class="btn btn-primary font-title font-black" type="submit">VER MODELO</button>
@@ -354,14 +358,14 @@
 
         <div class="main-structures-composition">
             <div class="main-structures-titlebox_container">
-                    <img class="main-structures-titlebox_image" src="/images/dreamVeilSymbol_white.png"
-                        alt="Logo de DreamVeil">
-                    <h2 class="main-structures-titlebox_text font-white font-title fs-subtitle">EXPLORA NUESTROS
-                        ENTORNOS Y ESTRUCTURAS</h2>
-                    <p class="main-structures-titlebox_text font-white font-text fs-text">
-                        Cada elemento ha sido creado con mimo y dedicación. Explora todo cuanto
-                        hayas podido soñar y añadelo a tu carrito para hacer tus sueños realidad.
-                    </p>
+                <img class="main-structures-titlebox_image" src="/images/dreamVeilSymbol_white.png"
+                    alt="Logo de DreamVeil">
+                <h2 class="main-structures-titlebox_text font-white font-title fs-subtitle">EXPLORA NUESTROS
+                    ENTORNOS Y ESTRUCTURAS</h2>
+                <p class="main-structures-titlebox_text font-white font-text fs-text">
+                    Cada elemento ha sido creado con mimo y dedicación. Explora todo cuanto
+                    hayas podido soñar y añadelo a tu carrito para hacer tus sueños realidad.
+                </p>
                 <div class="card-button_container">
                     <a href="########">
                         <button class="btn btn-primary font-title font-black" type="submit">VER MODELO</button>
@@ -369,11 +373,11 @@
                 </div>
             </div>
             <div class="main-structures-image_container">
-                <img class="main-structures-image" src="/images/Brutos/AncientGreekTempleRuins/AncientGreekTempleRuins.JPG"
-                    alt="Ruinas desoladas">
+                <img class="main-structures-image"
+                    src="/images/Brutos/AncientGreekTempleRuins/AncientGreekTempleRuins.JPG" alt="Ruinas desoladas">
             </div>
         </div>
-        
+
     </main>
     <!-- MAIN END -->
     <!-- FOOTER -->
@@ -383,20 +387,31 @@
                 <h3 class="fs-subtitle font-title font-black">SUSCRIBETE</h3>
                 <p class="fs-text font-text font-black">
                     Te mantendremos actualizado con todos los nuevos sueños y pesadillas que atraviesen el velo.
-                    Si en algún momento decides que esta información ya no te es util siempre puedes darte de baja 
+                    Si en algún momento decides que esta información ya no te es util siempre puedes darte de baja
                     y dejarás de recibir nuestros correos.
                 </p>
-                <input type="email" placeholder="Tu correo electrónico" required>
-                <a href="#">
-                    <button class="btn btn-primary font-title font-black" type="submit">SUSCRIBIRSE</button>
-                </a>
+                <input type="email" placeholder="Tu correo electrónico" id="subscribe-input" required>
+                <button class="btn btn-primary font-title font-black" type="submit"
+                    id="subscribe-button">SUSCRIBIRSE</button>
+                    <!-- POPUP SUBSCRIBE -->
+                <div class="subscribe-popup">
+                    <h3 class="font-white">BIENVENIDO</h3>
+                    <P class="font-white">Ya estas suscrito a nuestro newsletter ahora solo te falta unirte a la
+                        comunidad!</P>
+                    <div class="subscribe-popup_buttons">
+                        <button class="btn btn-primary font-title font-black subscribe-popup_show">UNIRME!</button>
+                        <button class="btn btn-primary font-title font-black subscribe-popup_show">Quizas mas tarde</button>
+                    </div>
+                </div>
+                <!-- POPUP SUBSCRIBE END -->
             </div>
             <div class="footer-column">
                 <h3 class="fs-subtitle font-title font-black">ASISTENCIA</h3>
                 <a class="fs-text font-text font-black" href="">Buscar centros de impresion 3d</a>
                 <a class="fs-text font-text font-black" href="">Contacta con nosotros</a>
                 <a class="fs-text font-text font-black" href="">Atencion al cliente</a>
-                <a class="fs-text font-text font-black" href="/html/legalAdvice.html#terminos-condiciones">Términos y condiciones de venta</a>
+                <a class="fs-text font-text font-black" href="/html/legalAdvice.html#terminos-condiciones">Términos y
+                    condiciones de venta</a>
                 <a class="fs-text font-text font-black" href="">Entregas</a>
                 <a class="fs-text font-text font-black" href="">Devoluciones</a>
             </div>
@@ -410,7 +425,7 @@
                 <a class="fs-text font-text font-black" href="">Pinta con DreamVeil</a>
                 <a class="fs-text font-text font-black" href="">Merchandising Oficial</a>
             </div>
-            <div class="footer-column"> 
+            <div class="footer-column">
                 <h3 class="fs-subtitle font-title font-black">INFORMACION SOBRE NOSOTROS</h3>
                 <a class="fs-text font-text font-black" href="">Trabaja con nosotros</a>
                 <a class="fs-text font-text font-black" href="">Sobre ls tiendas DreamVeil</a>
@@ -418,13 +433,17 @@
                 <a class="fs-text font-text font-black" href="">Inversores</a>
                 <a class="fs-text font-text font-black" href="">Responsbilidad Social</a>
                 <a class="fs-text font-text font-black" href="/html/legalAdvice.html#aviso-cookies">Aviso de cookies</a>
-                <a class="fs-text font-text font-black" href="/html/legalAdvice.html#aviso-cookies">Preferencias de las cookies</a>
-                <a class="fs-text font-text font-black" href="/html/legalAdvice.html#aviso-privacidad">Aviso de privacidad</a>
+                <a class="fs-text font-text font-black" href="/html/legalAdvice.html#aviso-cookies">Preferencias de las
+                    cookies</a>
+                <a class="fs-text font-text font-black" href="/html/legalAdvice.html#aviso-privacidad">Aviso de
+                    privacidad</a>
             </div>
         </div>
     </footer>
     <!-- FOOTER END -->
     <!-- SCRIPTS -->
+    <script src="/javaScript/catalog.js"></script>
+    <script src="/javaScript/product.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
@@ -432,4 +451,5 @@
     <script src="/javaScript/scriptBackground.js"></script>
     <script src="/javaScript/scriptVisor.js"></script>
 </body>
+
 </html>
