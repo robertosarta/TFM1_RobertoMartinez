@@ -12,7 +12,8 @@ function catchTags(model) {
     }
 }
 
-function searchFilter() {
+
+function searchFilterProducts() {
     nextPageSensor = false;
     sessionStorage.setItem("catalogInit", "true");
     sessionStorage.setItem("selectedFilter", filtersInputProducts.value);
@@ -21,10 +22,10 @@ function searchFilter() {
 };
 
 
-filtersButtonProducts.addEventListener('click', () => {searchFilter()});
+filtersButtonProducts.addEventListener('click', () => {searchFilterProducts()});
 filtersInputProducts.addEventListener('keydown', (e) => {
     if (e.key === 'Enter'){
-        searchFilter();
+        searchFilterProducts();
     }
 });
 
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     productModelUid = productModel.uid;
     catchTags(productModel);
     fetchFilter(productModelTags, (models) => createCard(models, true));
-    console.log(productModelTags);
+    console.log('Aqui', productModelTags);
     clientProduct.init(productModelUid, {
         success: function onSuccess(api) {
             api.start();

@@ -8,6 +8,7 @@ let filtersInputDesplegable = document.getElementById("filters-input_search_desp
 let filtersButtonDesplegable = document.getElementById("filters-button_search_desplegable");
 const modelSection = document.querySelector(".model-section");
 
+
 if (savedCart) {
     cart = savedCart   //actualiza el array desde el otro js
 };
@@ -75,6 +76,8 @@ function assignFilter(elem, filter) {
     });
 };
 
+
+
 const popularFilter = document.querySelectorAll(".filter_popular")
 const characterFilter = document.querySelectorAll(".filter_personajes");
 const creatureFilter = document.querySelectorAll(".filter_criaturas");
@@ -111,7 +114,6 @@ popularFilter.forEach(button => {
         window.location.href = "./catalog.html"
     });
 });
-
 function searchFilter() {
     nextPageSensor = false;
     sessionStorage.setItem("catalogInit", "true");
@@ -126,6 +128,8 @@ function searchFilterDesplegable() {
     sessionStorage.setItem("popularActive", "false");
     window.location.href = "./catalog.html"
 };
+
+
 filtersButton.addEventListener('click', () => {searchFilter()});
 filtersInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter'){
@@ -251,9 +255,7 @@ function fetchFilter(filter, createCard, url = null, filterPopular = false) {
     })
         .then(res => res.json())
         .then(data => {
-            const models = data.results;
-            createCard(models);
-            nextPageURL = data.next;
+            createCard(data.results);
             nextPageSensor = true;
             console.log("Respuesta completa de la API:", data); /*PARA VER QUE ME DEVUELVE*/
         });

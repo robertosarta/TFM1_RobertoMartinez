@@ -5,6 +5,7 @@ const subscribeButton = document.getElementById("subscribe-button");
 const subscribePopUp = document.querySelector(".subscribe-popup");
 let subscribeButtonInit = false;
 let subscribeButtonPopUp = document.querySelectorAll(".subscribe-popup_show");
+const createAccountButton = document.getElementById("create-account");
 
 menuToggle.addEventListener("click", () => {
     desplegableMenu.classList.toggle("open");
@@ -55,5 +56,8 @@ subscribeButtonPopUp.forEach(element => {
     } )
 });
 
+createAccountButton.addEventListener('click', () =>{
+    window.location.href = "./signin.html";
+})
 
 

@@ -54,92 +54,6 @@
         </nav>
     </header>
     <!--  HEADER END  -->
-
-    <!-- FILTERS NAVBAR -->
-    <nav class="navbar navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-            <div class=" align-items-center gap-3 flex-wrap filters-nav-left_container">
-                <a class="navbar-brand font-title filter_personajes" href="#">PERSONAJES</a>
-                <a class="navbar-brand font-title filter_criaturas" href="#">CRIATURAS</a>
-                <a class="navbar-brand font-title filter_estructuras" href="#">ESTRUCTURAS</a>
-                <div class="dropdown">
-                    <a class="navbar-brand dropdown-toggle font-title" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        EXPLORA
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item fs-text font-title filter_popular" href="#">Populares</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item font-title filter_animales" href="#">Animales y mascotas</a></li>
-                        <li><a class="dropdown-item font-title filter_arquitectura" href="#">Arquitectura</a></li>
-                        <li><a class="dropdown-item font-title filter_vehiculos" href="#">vehiculos</a></li>
-                        <li><a class="dropdown-item font-title filter_criaturas" href="#">Criaturas</a></li>
-                        <li><a class="dropdown-item font-title filter_personajes" href="#">Personajes</a></li>
-                        <li><a class="dropdown-item font-title filter_historico" href="#">Historico</a></li>
-                        <li><a class="dropdown-item font-title filter_electronica" href="#">Electrónica y gadgets</a></li>
-                        <li><a class="dropdown-item font-title filter_estilo" href="#">Estilo</a></li>
-                        <li><a class="dropdown-item font-title filter_comida" href="#">Comida</a></li>
-                        <li><a class="dropdown-item font-title filter_decoracion" href="#">Decoración hogar</a></li>
-                        <li><a class="dropdown-item font-title filter_plantas" href="#">Plantas</a></li>
-                        <li><a class="dropdown-item font-title filter_armas" href="#">Armas</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="filters-nav-right_container">
-                <!-- SEARCH -->
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="filters-input_search">
-                    <button class="btn btn-secondary font-title font-black" type="submit" id="filters-button_search">Buscar</button>
-                </form>
-                <!-- SEARCH END -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                    aria-labelledby="offcanvasDarkNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body dropdown-menu-dark">
-                        <form class="d-flex mt-3" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="filters-input_search_desplegable">
-                            <button class="btn btn-primary font-title font-black " type="submit" id="filters-button_search_desplegable">Buscar</button>
-                        </form>
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item fs-text font-title filter_popular" href="#">Populares</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item font-title filter_animales" href="#">Animales y mascotas</a></li>
-                                    <li><a class="dropdown-item font-title filter_arquitectura" href="#">Arquitectura</a></li>
-                                    <li><a class="dropdown-item font-title filter_vehiculos" href="#">vehiculos</a></li>
-                                    <li><a class="dropdown-item font-title filter_criaturas" href="#">Criaturas</a></li>
-                                    <li><a class="dropdown-item font-title filter_personajes" href="#">Personajes</a></li>
-                                    <li><a class="dropdown-item font-title filter_historico" href="#">Historico</a></li>
-                                    <li><a class="dropdown-item font-title filter_electronica" href="#">Electrónica y gadgets</a></li>
-                                    <li><a class="dropdown-item font-title filter_estilo" href="#">Estilo</a></li>
-                                    <li><a class="dropdown-item font-title filter_comida" href="#">Comida</a></li>
-                                    <li><a class="dropdown-item font-title filter_decoracion" href="#">Decoración hogar</a></li>
-                                    <li><a class="dropdown-item font-title filter_plantas" href="#">Plantas</a></li>
-                                    <li><a class="dropdown-item font-title filter_armas" href="#">Armas</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <!-- FILTERS NAVBAR CLOSE -->
-        
     <!-- DESPLEGABLE MENU (lo saque fuera para que el zindex del header no interfiriese y poder maquetarlo, no se si esta bien hecho asi)-->
     <div class="desplegable-menu" id="desplegable-menu">
         <div class="desplegable-menu-bar_busqueda">
@@ -206,20 +120,74 @@
     </div>
     <!-- DESPLEGABLE MENU END -->
     <!-- MAIN -->
-    <main class="catalog-main">
-        <div class="model-section_container">
-            <div class="model-section_title-container">
-                <h2 class="model-section_title font-white font-title fs-subtitle">Models</h2>
+    <main id="login-section">
+        <div class="login-access-section font-white">
+            <div class="login-access-section_container">
+                <div class="login-access-section_image_container">
+                    <img class="login-access-section_image" src="/images/dreamVeilSymbol_white.png"
+                        alt="Simbolo de Dream-Veil">
+                </div>
+                <h2 class="font-text">DreamVeil</h2>
             </div>
-            <div class="model-section font-white">
-                <!-- AQUI VAN TODOS LOS MODELOS GENERADOS EN CARD CON .JS -->
+            <div class="login-access_form_section">
+                <h3 class="font-title">Crear una cuenta en el Velo</h3>
+                <p class="font-text fs-text">
+                    ¿Ya tienes una cuenta DreamVeil? ¡Perfecto! <a href="/html/login.html">Pincha aquí para acceder.</a>
+                </p>
+
+                <form class="login-access_form_container" action="/index.html">
+                    <div class="login-access_form_container-item">
+                        <label class="font-title" for="signin-input_mail">Dirección de email</label>
+                        <input type="email" placeholder="Tu correo electrónico" id="signin-input_mail" name="email" required>
+                    </div>
+                    <div class="login-access_form_container-item">
+                        <label class="font-title" for="signin-input_password">Introduce una contraseña</label>
+                        <input type="password" placeholder="Contraseña" id="signin-input_password" name="password" required>
+                    </div>
+                    <div class="login-access_form_container-item">
+                        <label class="font-title" for="signin-input_confirmation">Confirmar contraseña</label>
+                        <input type="password" placeholder="Contraseña" id="signin-input_confirmation" name="confirmation" required>
+                    </div>
+                    <div class="login-access_form_container-item">
+                        <label class="font-title" for="signin-input_name">Nombre</label>
+                        <input type="text" placeholder="Contraseña" id="signin-input_name" name="name" required>
+                    </div>
+                    <div class="login-access_form_container-item">
+                        <label class="font-title" for="signin-input_surname">Apellido</label>
+                        <input type="text" placeholder="Contraseña" id="signin-input_surname" name="surname" required>
+                    </div>
+                    <div class="login-access_form_container-item">
+                        <label class="font-title" for="signin-input_birth">Fecha de nacimiento</label>
+                        <input type="date" id="signin-input_birth" name="birth" required>
+                    </div>
+                    <div class="login-access_check_container">
+                        <label class="font-title" for="signin-input_terms">He leído y estoy de acuerdo con los 
+                            <a href="/html/legalAdvice.html#terminos-uso">términos y condiciones.</a>
+                        </label>
+                        <input type="checkbox" id="signin-input_terms" name="terms" required>
+                    </div>
+                    <div class="login-access_check_container">
+                        <label class="font-title" for="signin-input_subscribe">Quiero suscribirme a la newsletter de DreamVeil.</label>
+                        <input type="checkbox" id="signin-input_suscribe" name="suscribe">
+                    </div>
+                    <div>
+                        <p>Revisa nuestra <a href="/html/legalAdvice.html#aviso-privacidad">página de privacidad</a> para saber los detalles sobre cómo usamos tu información.</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary font-title font-black" type="submit"
+                            id="signin-button">Acceder</button>
+                    </div>
+                </form>
             </div>
-            <div class="model-section_bottom">
-                <i class="bi bi-plus model-section_load-next"></i>
+            <div class="login-access-section_links_container">
+                <a class="font-clean font-white font-hover" href="/html/legalAdvice.html#aviso-privacidad">Aviso de Privacidad</a>
+                <a class="font-clean font-white font-hover" href="/html/legalAdvice.html#aviso-cookies">Aviso de Cookies</a>
+                <a class="font-clean font-white font-hover" href="/html/legalAdvice.html#aviso-cookies">Preferencias de las Cookies</a>
             </div>
+        </div>
     </main>
-    <!-- MAIN ENDS -->
-<!-- FOOTER -->
+    <!-- MAIN END -->
+    <!-- FOOTER -->
     <footer>
         <div class="footer-container">
             <div class="footer-column">
