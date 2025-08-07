@@ -29,45 +29,10 @@ document.querySelectorAll('.card-custom').forEach(card => {
     })
 });
 
-
-// ENLACES DE MENU DESPLEGABLE
 document.getElementById("catalogButton").addEventListener("click", () => {
     sessionStorage.setItem("catalogInit", "true");
     window.location.href = "./html/catalog.html";
 })
-document.getElementById("characterDream").addEventListener("click", () => {
-    sessionStorage.setItem("catalogInit", "true");
-    window.location.href = "./html/catalog.html";
-})
-document.getElementById("creatureDream").addEventListener("click", () => {
-    sessionStorage.setItem("catalogInit", "true");
-    window.location.href = "./html/catalog.html";
-})
-document.getElementById("enviromentDream").addEventListener("click", () => {
-    sessionStorage.setItem("catalogInit", "true");
-    window.location.href = "./html/catalog.html";
-})
-document.getElementById("structureDream").addEventListener("click", () => {
-    sessionStorage.setItem("catalogInit", "true");
-    window.location.href = "./html/catalog.html";
-})
-document.getElementById("characterNightmare").addEventListener("click", () => {
-    sessionStorage.setItem("catalogInit", "true");
-    window.location.href = "./html/catalog.html";
-})
-document.getElementById("creatureNightmare").addEventListener("click", () => {
-    sessionStorage.setItem("catalogInit", "true");
-    window.location.href = "./html/catalog.html";
-})
-document.getElementById("enviromentNightmare").addEventListener("click", () => {
-    sessionStorage.setItem("catalogInit", "true");
-    window.location.href = "./html/catalog.html";
-})
-document.getElementById("structureNightmare").addEventListener("click", () => {
-    sessionStorage.setItem("catalogInit", "true");
-    window.location.href = "./html/catalog.html";
-})
-// ENLACES DE MENU DESPLEGABLE
 
 subscribeButton.addEventListener('click', () => {
     if (!subscribeButtonInit && subscribeInput.value){
