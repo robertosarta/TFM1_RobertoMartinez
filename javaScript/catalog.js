@@ -71,6 +71,7 @@ function assignFilter(elem, filter) {
             sessionStorage.setItem("catalogInit", "true");
             sessionStorage.setItem("selectedFilter", filter);
             sessionStorage.setItem("popularActive", "false");
+            console.log("hola estas pulsando un filtro");
             window.location.href = "./catalog.html"
     });
     });
@@ -257,6 +258,7 @@ function fetchFilter(filter, createCard, url = null, filterPopular = false) {
         .then(data => {
             createCard(data.results);
             nextPageSensor = true;
+            nextPageURL = data.next;
             console.log("Respuesta completa de la API:", data); /*PARA VER QUE ME DEVUELVE*/
         });
 };

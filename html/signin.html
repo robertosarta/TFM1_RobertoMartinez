@@ -132,50 +132,50 @@
             <div class="login-access_form_section">
                 <h3 class="font-title">Crear una cuenta en el Velo</h3>
                 <p class="font-text fs-text">
-                    ¿Ya tienes una cuenta DreamVeil? ¡Perfecto! <a href="/html/login.html">Pincha aquí para acceder.</a>
+                    ¿Ya tienes una cuenta DreamVeil? ¡Perfecto! <a href="/html/login.html" class="font-white font-hover">Pincha aquí para acceder.</a>
                 </p>
 
                 <form class="login-access_form_container" action="/index.html">
                     <div class="login-access_form_container-item">
                         <label class="font-title" for="signin-input_mail">Dirección de email</label>
-                        <input type="email" placeholder="Tu correo electrónico" id="signin-input_mail" name="email" required>
+                        <input type="email" placeholder="Tu correo electrónico" id="signin-input_mail" name="email" aria-label="introducir email" required>
                     </div>
                     <div class="login-access_form_container-item">
                         <label class="font-title" for="signin-input_password">Introduce una contraseña</label>
-                        <input type="password" placeholder="Contraseña" id="signin-input_password" name="password" required>
+                        <input type="password" placeholder="Contraseña" id="signin-input_password" name="password" aria-label="introducir contraseña" required>
                     </div>
                     <div class="login-access_form_container-item">
                         <label class="font-title" for="signin-input_confirmation">Confirmar contraseña</label>
-                        <input type="password" placeholder="Contraseña" id="signin-input_confirmation" name="confirmation" required>
+                        <input type="password" placeholder="Contraseña" id="signin-input_confirmation" name="confirmation" aria-label="introducir confirmacion de contraseña" required>
                     </div>
                     <div class="login-access_form_container-item">
                         <label class="font-title" for="signin-input_name">Nombre</label>
-                        <input type="text" placeholder="Contraseña" id="signin-input_name" name="name" required>
+                        <input type="text" placeholder="Contraseña" id="signin-input_name" name="name" aria-label="introducir nombre" required>
                     </div>
                     <div class="login-access_form_container-item">
                         <label class="font-title" for="signin-input_surname">Apellido</label>
-                        <input type="text" placeholder="Contraseña" id="signin-input_surname" name="surname" required>
+                        <input type="text" placeholder="Contraseña" id="signin-input_surname" name="surname" aria-label="introducir apellido" required>
                     </div>
                     <div class="login-access_form_container-item">
                         <label class="font-title" for="signin-input_birth">Fecha de nacimiento</label>
-                        <input type="date" id="signin-input_birth" name="birth" required>
+                        <input type="date" id="signin-input_birth" name="birth" aria-label="introducir fecha de nacimiento" required>
                     </div>
                     <div class="login-access_check_container">
                         <label class="font-title" for="signin-input_terms">He leído y estoy de acuerdo con los 
-                            <a href="/html/legalAdvice.html#terminos-uso">términos y condiciones.</a>
+                            <a href="/html/legalAdvice.html#terminos-uso" class="font-white font-hover">términos y condiciones.</a>
                         </label>
-                        <input type="checkbox" id="signin-input_terms" name="terms" required>
+                        <input type="checkbox" id="signin-input_terms" name="terms" aria-label="casilla de terminos y condiciones" required>
                     </div>
                     <div class="login-access_check_container">
                         <label class="font-title" for="signin-input_subscribe">Quiero suscribirme a la newsletter de DreamVeil.</label>
-                        <input type="checkbox" id="signin-input_suscribe" name="suscribe">
+                        <input type="checkbox" id="signin-input_suscribe" name="suscribe" aria-label="casilla de newsletter">
                     </div>
                     <div>
-                        <p>Revisa nuestra <a href="/html/legalAdvice.html#aviso-privacidad">página de privacidad</a> para saber los detalles sobre cómo usamos tu información.</p>
+                        <p>Revisa nuestra <a href="/html/legalAdvice.html#aviso-privacidad" class="font-white font-hover" aria-label="ir a pagina de privacidad">página de privacidad</a> para saber los detalles sobre cómo usamos tu información.</p>
                     </div>
                     <div>
-                        <button class="btn btn-primary font-title font-black" type="submit"
-                            id="signin-button">Acceder</button>
+                        <button class="btn btn-primary font-title font-black" type="submit" aria-label="boton de registrar"
+                            id="signin-button">Registrar</button>
                     </div>
                 </form>
             </div>

@@ -3,6 +3,11 @@ let clientProduct;
 let productModelUid;
 let productModel;
 let productModelTags;
+let nombreProduct = document.querySelector(".product-api_content_name");
+let viewCountProduct = document.querySelector(".product-api_content_views");
+let commentsProduct = document.querySelector(".product-api_content_comments");
+let starProduct = document.querySelector(".product-api_content_stars");
+
 let filtersInputProducts = document.getElementById("filters-input_search_products");
 let filtersButtonProducts = document.getElementById("filters-button_search_products");
 function catchTags(model) {
@@ -12,15 +17,14 @@ function catchTags(model) {
     }
 }
 
-
 function searchFilterProducts() {
     nextPageSensor = false;
     sessionStorage.setItem("catalogInit", "true");
     sessionStorage.setItem("selectedFilter", filtersInputProducts.value);
     sessionStorage.setItem("popularActive", "false");
-    window.location.href = "./catalog.html"
+    console.log("searchFiltersProduct se ejecuta");
+    window.location.href = "./html/catalog.html"
 };
-
 
 filtersButtonProducts.addEventListener('click', () => {searchFilterProducts()});
 filtersInputProducts.addEventListener('keydown', (e) => {
@@ -40,10 +44,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     productModel = JSON.parse(productModelString);
     /*lo dejo accesible parseado*/
+
+    /*asigno los valores*/
     productModelUid = productModel.uid;
+    nombreProduct.textContent = productModel.name;
+    viewCountProduct.textContent = productModel.viewCount;
+    commentsProduct.textContent = productModel.commentCount;
+    starProduct.textContent = productModel.likeCount;
     catchTags(productModel);
     fetchFilter(productModelTags, (models) => createCard(models, true));
-    console.log('Aqui', productModelTags);
+    console.log(productModel)
     clientProduct.init(productModelUid, {
         success: function onSuccess(api) {
             api.start();
@@ -58,6 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     });
 })
+
+
 
 
 
