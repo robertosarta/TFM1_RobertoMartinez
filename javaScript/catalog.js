@@ -251,7 +251,7 @@ function fetchFilter(filter, createCard, url = null, filterPopular = false) {
     }
     fetch(apiUrl, {
         headers: {
-            'Authorization': 'Token d49d54d37942424cb629bc29d0c4267e'
+            'Authorization': 'Token 6c0d4578e96b4b10b04fba257249d6a1'
         }
     })
         .then(res => res.json())
