@@ -6,6 +6,15 @@ const subscribePopUp = document.querySelector(".subscribe-popup");
 let subscribeButtonInit = false;
 let subscribeButtonPopUp = document.querySelectorAll(".subscribe-popup_show");
 const createAccountButton = document.getElementById("create-account");
+/***********************/
+const characterDream = document.getElementById("characterDream");
+const creatureDream = document.getElementById("creatureDream");
+const enviromentDream = document.getElementById("enviromentDream");
+const structureDream = document.getElementById("structureDream");
+const characterNightmare = document.getElementById("characterNightmare");
+const creatureNightmare = document.getElementById("creatureNightmare");
+const enviromentNightmare = document.getElementById("enviromentNightmare");
+const structureNightmare = document.getElementById("structureNightmare");
 
 menuToggle.addEventListener("click", () => {
     desplegableMenu.classList.toggle("open");
@@ -58,6 +67,32 @@ subscribeButtonPopUp.forEach(element => {
 
 createAccountButton.addEventListener('click', () =>{
     window.location.href = "./signin.html";
+})
+
+// BOTONES MENU DESPLEGABLE (TEMPORALES)
+characterDream.addEventListener('click', () =>{
+    window.location.href = "/html/catalog.html";
+})
+creatureDream.addEventListener('click', () =>{
+    window.location.href = "/html/catalog.html";
+})
+enviromentDream.addEventListener('click', () =>{
+    window.location.href = "/html/catalog.html";
+})
+structureDream.addEventListener('click', () =>{
+    window.location.href = "/html/catalog.html";
+})
+characterNightmare.addEventListener('click', () =>{
+    window.location.href = "/html/catalog.html";
+})
+creatureNightmare.addEventListener('click', () =>{
+    window.location.href = "/html/catalog.html";
+})
+enviromentNightmare.addEventListener('click', () =>{
+    window.location.href = "/html/catalog.html";
+})
+structureNightmare.addEventListener('click', () =>{
+    window.location.href = "/html/catalog.html";
 })
 
 
